@@ -211,7 +211,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const btn = document.getElementById('theme-toggle');
     const root = document.documentElement;
     // load saved or default
-    const current = localStorage.getItem('theme') || 'light';
+    const current = localStorage.getItem('theme') || 'dark';
+    console.log('Theme toggle script loaded, current theme:', current);
     root.classList.toggle('dark-mode', current === 'dark');
     btn.textContent = current === 'dark' ? 'Light Mode ☀️' : 'Dark Mode 🌙';
 
@@ -219,6 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const isDark = root.classList.toggle('dark-mode');
       btn.textContent = isDark ? 'Light Mode ☀️' : 'Dark Mode 🌙';
       localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      console.log('Toggle clicked, isDark:', isDark);
     });
   });
 
