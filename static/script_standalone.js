@@ -207,4 +207,19 @@ function renderResults(total, breakdown) {
   container.appendChild(breakdownDiv);
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('theme-toggle');
+    const root = document.documentElement;
+    // load saved or default
+    const current = localStorage.getItem('theme') || 'light';
+    root.classList.toggle('dark-mode', current === 'dark');
+    btn.textContent = current === 'dark' ? 'Light Mode ☀️' : 'Dark Mode 🌙';
+
+    btn.addEventListener('click', () => {
+      const isDark = root.classList.toggle('dark-mode');
+      btn.textContent = isDark ? 'Light Mode ☀️' : 'Dark Mode 🌙';
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+  });
+
 fetchItems();
