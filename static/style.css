@@ -1,34 +1,61 @@
+
+
 /* Compact Styles */
 :root {
+  /* Font & base sizing */
   --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --fs-base: 0.8rem;
+  --fs-header: 0.9rem;
+
+  /* Colors */
   --text-color: #333;
   --bg-light: #f9f9f9;
   --bg-col: #fff;
   --accent: #1e90ff;
+
+  /* Spacing & layout */
   --radius: 4px;
   --gap: 0.5rem;
   --small-gap: 0.25rem;
-  --fs-base: 0.8rem;
-  --fs-header: 0.9rem;
 }
 
+/* 🌙 Dark mode styles */
+:root.dark-mode {
+  --text-color: #ddd;
+  --bg-light: #1e1e1e;
+  --bg-col: #2a2a2a;
+  --accent: #87cefa;
+  --dune-yellow: #d4c47c;
+}
+
+:root.dark-mode h2,
+:root.dark-mode h1 {
+  color: var(--dune-yellow);
+}
+
+
+/* Page setup */
 body {
   font-family: var(--font-stack);
   color: var(--text-color);
   font-size: var(--fs-base);
+  background: var(--bg-light);
+  transition: background 0.3s, color 0.3s;
 }
 
 #results {
   padding: var(--gap);
 }
 
-/* Sections */
+/* Sections container */
 .material-list,
 .breakdown {
   background: var(--bg-light);
   padding: var(--small-gap);
   border-radius: var(--radius);
   margin-bottom: var(--gap);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: background 0.3s;
 }
 
 /* Section titles */
@@ -41,7 +68,7 @@ body {
   padding-bottom: var(--small-gap);
 }
 
-/* Grid: 4 columns, tighter */
+/* Grid: 4 columns, compact */
 .columns {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -49,11 +76,13 @@ body {
   margin-top: var(--small-gap);
 }
 
-/* Column cards */
+/* Column card styling */
 .column {
   background: var(--bg-col);
   border-radius: var(--radius);
   padding: var(--small-gap);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+  transition: background 0.3s;
 }
 
 /* Column headers */
@@ -61,15 +90,18 @@ body {
   font-size: var(--fs-base);
   font-weight: 600;
   margin-bottom: var(--small-gap);
+  color: var(--accent);
 }
 
-/* Items */
+/* Material & breakdown items */
 .material-item,
 .breakdown-item {
   margin: 0;
   padding-left: 0.5em;
   text-indent: -0.5em;
   line-height: 1.2;
+  color: var(--text-color);
+  transition: color 0.3s;
 }
 
 .material-item::before,
@@ -88,7 +120,24 @@ body {
   grid-column: span 4;
 }
 
-/* Responsive */
+/* Dark mode overrides for elements */
+.dark-mode body {
+  background: var(--bg-light);
+}
+.dark-mode .material-list,
+.dark-mode .breakdown {
+  background: var(--bg-light);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+.dark-mode .column {
+  background: var(--bg-col);
+}
+.dark-mode .material-item,
+.dark-mode .breakdown-item {
+  color: var(--text-color);
+}
+
+/* Responsive adjustments */
 @media (max-width: 800px) {
   .columns { grid-template-columns: repeat(2, 1fr); }
 }

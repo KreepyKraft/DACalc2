@@ -1,5 +1,10 @@
 let itemsList = [];
 
+  
+function toggleDarkMode() {
+  document.body.classList.toggle('dark-mode');
+}
+
 async function fetchItems() {
   itemsList = Object.entries(ITEM_DATA)
     .filter(([_, data]) => data.ingredients && Object.keys(data.ingredients).length > 0)
