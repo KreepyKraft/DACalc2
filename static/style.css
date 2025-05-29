@@ -1,0 +1,97 @@
+/* Compact Styles */
+:root {
+  --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --text-color: #333;
+  --bg-light: #f9f9f9;
+  --bg-col: #fff;
+  --accent: #1e90ff;
+  --radius: 4px;
+  --gap: 0.5rem;
+  --small-gap: 0.25rem;
+  --fs-base: 0.8rem;
+  --fs-header: 0.9rem;
+}
+
+body {
+  font-family: var(--font-stack);
+  color: var(--text-color);
+  font-size: var(--fs-base);
+}
+
+#results {
+  padding: var(--gap);
+}
+
+/* Sections */
+.material-list,
+.breakdown {
+  background: var(--bg-light);
+  padding: var(--small-gap);
+  border-radius: var(--radius);
+  margin-bottom: var(--gap);
+}
+
+/* Section titles */
+.material-list > h3,
+.breakdown > h3 {
+  margin: 0 0 var(--small-gap) 0;
+  font-size: var(--fs-header);
+  color: var(--accent);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: var(--small-gap);
+}
+
+/* Grid: 4 columns, tighter */
+.columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--small-gap);
+  margin-top: var(--small-gap);
+}
+
+/* Column cards */
+.column {
+  background: var(--bg-col);
+  border-radius: var(--radius);
+  padding: var(--small-gap);
+}
+
+/* Column headers */
+.column-header {
+  font-size: var(--fs-base);
+  font-weight: 600;
+  margin-bottom: var(--small-gap);
+}
+
+/* Items */
+.material-item,
+.breakdown-item {
+  margin: 0;
+  padding-left: 0.5em;
+  text-indent: -0.5em;
+  line-height: 1.2;
+}
+
+.material-item::before,
+.breakdown-item::before {
+  content: '•';
+  margin-right: 0.3em;
+  color: var(--accent);
+}
+
+/* Breakdown titles span full width */
+.item-title {
+  font-size: var(--fs-base);
+  font-weight: 600;
+  color: var(--accent);
+  margin: var(--small-gap) 0 0 var(--small-gap);
+  grid-column: span 4;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .columns { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 500px) {
+  .columns { grid-template-columns: 1fr; }
+}

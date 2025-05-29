@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="static/style.css">
+  <meta charset="UTF-8">
+  <title>Dune Crafting Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    .item-row {
+      display: flex;
+      gap: 1em;
+      margin-bottom: 1em;
+    }
+
+    select, input[type="number"] {
+      padding: 0.5em;
+      font-size: 1em;
+    }
+
+    button {
+      margin: 0.5em;
+      padding: 0.5em 1em;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    .results-section {
+      background: #fff;
+      padding: 1em;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .material-list, .breakdown {
+      margin-top: 1em;
+    }
+
+    .material-item, .breakdown-item {
+      margin-bottom: 0.5em;
+    }
+
+    .item-title {
+      font-weight: bold;
+      margin-top: 1em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Dune Awakening Crafting Calculator</h1>
+
+  <div id="items-container"></div>
+  <button onclick="addItem()">+ Add Item</button>
+  <button onclick="calculate()">Calculate</button>
+
+  <h2>Results</h2>
+  <div id="results" class="results-section"></div>
+
+  <script src="static/item_data.js"></script>
+  <script src="static/script_standalone.js"></script>
+</body>
+</html>
