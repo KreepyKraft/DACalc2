@@ -7,6 +7,14 @@ const ITEM_DATA = {
     "fabricators": [],
     "ingredients": {}
   },
+  "Aluminum Ingot": {
+    "fabricators": [],
+    "ingredients": {
+      "Aluminum Ore": 30,
+      "Time": 5.0,
+      "Water": 200
+    }
+  },
   "Aren's Boots": {
     "fabricators": [
       "Fabricator",
@@ -160,7 +168,7 @@ const ITEM_DATA = {
     "fabricators": [],
     "ingredients": {
       "Cobalt Paste": 17,
-      "Holtznab Actuator": 23,
+      "Holtzman Actuator": 23,
       "Particle Capacitor": 25,
       "Steel Ingot": 30,
       "Time": 15.0,
@@ -1727,6 +1735,106 @@ const ITEM_DATA = {
   "Scipio's Drinker Schematic": {
     "fabricators": [],
     "ingredients": {}
+  },
+  "Scout Ornithopter Chassis Mk4": {
+    "fabricators": [],
+    "ingredients": {
+      "Advanced Servoks": 10,
+      "Aluminum Ingot": 45,
+      "Carbide Scraps": 7,
+      "Cobalt Paste": 14,
+      "Time": 15.0,
+      "Water": 340
+    }
+  },
+  "Scout Ornithopter Cockpit Mk4": {
+    "fabricators": [],
+    "ingredients": {
+      "Advanced Servoks": 10,
+      "Aluminum Ingot": 45,
+      "Armor Plating": 11,
+      "Cobalt Paste": 14,
+      "Diamondine Dust": 7,
+      "Time": 15.0,
+      "Water": 340
+    }
+  },
+  "Scout Ornithopter Engine Mk4": {
+    "fabricators": [],
+    "ingredients": {
+      "Aluminum Ingot": 35,
+      "Armor Plating": 11,
+      "Cobalt Paste": 14,
+      "Complex Machinery": 8,
+      "Particle Capacitor": 6,
+      "Time": 15.0,
+      "Water": 338
+    }
+  },
+  "Scout Ornithopter Generator Mk4": {
+    "fabricators": [],
+    "ingredients": {
+      "Aluminum Ingot": 35,
+      "Cobalt Paste": 14,
+      "Particle Capacitor": 16,
+      "Time": 15.0,
+      "Water": 338
+    }
+  },
+  "Scout Ornithopter Hull Mk4": {
+    "fabricators": [],
+    "ingredients": {
+      "Advanced Servoks": 10,
+      "Aluminum Ingot": 30,
+      "Armor Plating": 11,
+      "Cobalt Paste": 14,
+      "Diamondine Dust": 7,
+      "Time": 15.0,
+      "Water": 340
+    }
+  },
+  "Scout Ornithopter Scan Module": {
+    "fabricators": [],
+    "ingredients": {
+      "Aluminum Ingot": 55,
+      "Cobalt Paste": 27,
+      "Complex Machinery": 23,
+      "Particle Capacitor": 31,
+      "Time": 15.0,
+      "Water": 507
+    }
+  },
+  "Scout Ornithopter Storage Module": {
+    "fabricators": [],
+    "ingredients": {
+      "Advanced Servoks": 30,
+      "Aluminum Ingot": 55,
+      "Cobalt Paste": 27,
+      "Time": 15.0,
+      "Water": 510
+    }
+  },
+  "Scout Ornithopter Thruster Module": {
+    "fabricators": [],
+    "ingredients": {
+      "Aluminum Ingot": 60,
+      "Cobalt Paste": 27,
+      "Holtzman Actuator": 31,
+      "Particle Capacitor": 40,
+      "Time": 15.0,
+      "Water": 510
+    }
+  },
+  "Scout Ornithopter Wing Mk4": {
+    "fabricators": [],
+    "ingredients": {
+      "Advanced Servoks": 4,
+      "Aluminum Ingot": 9,
+      "Cobalt Paste": 3,
+      "Industrial Pump": 2,
+      "Time": 15.0,
+      "Water": 340
+    }
   },
   "Scrap Metal Knife": {
     "fabricators": [
