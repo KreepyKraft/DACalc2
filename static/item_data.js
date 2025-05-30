@@ -152,6 +152,7 @@ const ITEM_DATA = {
       "Advanced Servoks": 21,
       "Cobalt Paste": 13,
       "Steel Ingot": 30,
+      "Time": 15.0,
       "Water": 135
     }
   },
@@ -162,6 +163,7 @@ const ITEM_DATA = {
       "Holtznab Actuator": 23,
       "Particle Capacitor": 25,
       "Steel Ingot": 30,
+      "Time": 15.0,
       "Water": 200
     }
   },
@@ -172,6 +174,7 @@ const ITEM_DATA = {
       "Complex Machinery": 19,
       "Particle Capacitor": 30,
       "Steel Ingot": 20,
+      "Time": 15.0,
       "Water": 135
     }
   },
@@ -181,6 +184,7 @@ const ITEM_DATA = {
       "Advanced Servoks": 20,
       "Cobalt Paste": 13,
       "Steel Ingot": 30,
+      "Time": 15.0,
       "Water": 135
     }
   },
@@ -190,6 +194,7 @@ const ITEM_DATA = {
       "Cobalt Paste": 13,
       "Particle Capacitor": 20,
       "Steel Ingot": 20,
+      "Time": 15.0,
       "Water": 135
     }
   },
@@ -200,6 +205,7 @@ const ITEM_DATA = {
       "Armor Plating": 13,
       "Cobalt Paste": 13,
       "Steel Ingot": 30,
+      "Time": 15.0,
       "Water": 135
     }
   },
@@ -209,6 +215,7 @@ const ITEM_DATA = {
       "Advanced Servoks": 12,
       "Cobalt Paste": 9,
       "Steel Ingot": 30,
+      "Time": 15.0,
       "Water": 200
     }
   },
@@ -218,6 +225,7 @@ const ITEM_DATA = {
       "Cobalt Paste": 4,
       "Particle Capacitor": 7,
       "Steel Ingot": 5,
+      "Time": 15.0,
       "Water": 45
     }
   },
@@ -254,6 +262,7 @@ const ITEM_DATA = {
     "fabricators": [],
     "ingredients": {
       "Erythrite Crystal": 3,
+      "Time": 5.0,
       "Water": 75
     }
   },
