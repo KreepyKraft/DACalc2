@@ -53,7 +53,8 @@ body {
   background: var(--bg-light);
   padding: var(--small-gap);
   border-radius: var(--radius);
-  margin-bottom: var(--gap);
+  margin-top: var(--small-gap);
+  margin-bottom: var(--small-gap);
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   transition: background 0.3s;
 }
@@ -135,6 +136,10 @@ body {
 .dark-mode .material-item,
 .dark-mode .breakdown-item {
   color: var(--text-color);
+}
+
+.dark-mode .results-section {
+  background: var(--bg-col);
 }
 
 /* Responsive adjustments */
