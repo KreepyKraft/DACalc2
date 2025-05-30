@@ -10,7 +10,7 @@ const ITEM_DATA = {
   "Aluminum Ingot": {
     "fabricators": [],
     "ingredients": {
-      "Aluminum Ore": 30,
+      "Aluminum Ore": 7,
       "Time": 5.0,
       "Water": 200
     }
