@@ -215,10 +215,10 @@ const ITEM_DATA = {
   "Buggy Tread MK3": {
     "fabricators": [],
     "ingredients": {
-      "Cobalt Paste": 16,
-      "Particle Capacitor": 28,
-      "Steel Ingot": 20,
-      "Water": 180
+      "Cobalt Paste": 4,
+      "Particle Capacitor": 7,
+      "Steel Ingot": 5,
+      "Water": 45
     }
   },
   "Buoyant Reaper Mk2": {
