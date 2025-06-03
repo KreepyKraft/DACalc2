@@ -4,11 +4,12 @@ from bs4 import BeautifulSoup
 import json
 import time
 import random
+import os
+import difflib
+from datetime import datetime
 
 BASE_URL = "https://awakening.wiki"
 CATEGORY_URL = f"{BASE_URL}/Category:Items"
-
-
 
 USER_AGENTS = [
     # Chrome
@@ -21,32 +22,40 @@ USER_AGENTS = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edge/121.0.0.0",
 ]
 
+ITEMS_FILE = "data/items.json"
+LOG_FILE = "data/update_log.txt"
+
+
 def get_random_headers():
     return {
         "User-Agent": random.choice(USER_AGENTS),
-        # "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-        # "Accept-Encoding": "gzip, deflate, br",
-        # "Accept-Language": "en-US,en;q=0.5",
-        # "Connection": "keep-alive",
     }
+
+
+def load_existing_items():
+    if os.path.exists(ITEMS_FILE):
+        with open(ITEMS_FILE, "r", encoding="utf-16") as f:
+            return json.load(
+                f,
+            )
+    return {}
+
 
 def get_item_links():
     item_links = []
     next_page = CATEGORY_URL
     while next_page:
         response = requests.get(next_page, headers=get_random_headers())
-        soup = BeautifulSoup(response.text, 'html.parser')
-        for li in soup.select('div#mw-pages li a'):
-            href = li.get('href')
+        soup = BeautifulSoup(response.text, "html.parser")
+        for li in soup.select("div#mw-pages li a"):
+            href = li.get("href")
             if href:
                 item_links.append(BASE_URL + href)
-        next_link = soup.find('a', string='next page')
-        if next_link:
-            next_page = BASE_URL + next_link.get('href')
-            time.sleep(0.5)
-        else:
-            next_page = None
+        next_link = soup.find("a", string="next page")
+        next_page = BASE_URL + next_link["href"] if next_link else None
+        time.sleep(0.5)
     return item_links
+
 
 def parse_item_page(url):
     resp = requests.get(url, headers=get_random_headers())
@@ -74,13 +83,9 @@ def parse_item_page(url):
         if len(cols) < 2:
             continue
 
-        # for the stations it can be crafted at
-        stations = []
-        for a in cols[0].find_all("a", title=True):
-            stations.append(a['title'])
-
-        # for ingredients and quantities including time and water
+        stations = [a["title"] for a in cols[0].find_all("a", title=True)]
         ingredients = {}
+
         for li in cols[1].find_all("li"):
             name_elem = li.find("a", title=True)
             text = li.get_text().strip()
@@ -95,12 +100,12 @@ def parse_item_page(url):
                 continue  # unknown item, skip
 
             try:
-                if 'x' in text:
-                    qty = int(text.split('x')[-1])
+                if "x" in text:
+                    qty = int(text.split("x")[-1])
                 elif re.search(r"\d+\s*mL", text):
-                    qty = int(text.split('mL')[0].strip())
+                    qty = int(text.split("mL")[0].strip())
                 elif text.endswith("s"):
-                    qty = float(text[:-1])  # use float for seconds
+                    qty = float(text[:-1])  # float for seconds
                 else:
                     qty = 1
             except ValueError:
@@ -113,21 +118,107 @@ def parse_item_page(url):
 
     return item_name, [], {}
 
-def main():
+
+def log_change(name, status, old=None, new=None):
+    with open(LOG_FILE, "a", encoding="utf-16") as log:
+        timestamp = datetime.now().isoformat()
+        log.write(f"[{timestamp}] {status.upper()} - {name}\n")
+        if status == "updated" and old and new:
+            old_str = json.dumps(old, indent=2, ensure_ascii=False, sort_keys=True)
+            new_str = json.dumps(new, indent=2, ensure_ascii=False, sort_keys=True)
+            diff = difflib.unified_diff(
+                old_str.splitlines(),
+                new_str.splitlines(),
+                fromfile="old",
+                tofile="new",
+                lineterm="",
+            )
+            for line in diff:
+                log.write(f"{line}\n")
+        log.write("\n")
+
+
+def sort_ingredients(ingredients):
+    return dict(sorted(ingredients.items(), key=lambda x: x[0].lower()))
+
+
+def has_changed(old_data: dict, new_data: dict) -> bool:
+    return sorted(old_data.get("fabricators", [])) != sorted(
+        new_data.get("fabricators", [])
+    ) or sort_ingredients(old_data.get("ingredients", {})) != sort_ingredients(
+        new_data.get("ingredients", {})
+    )
+
+
+def swiper():
+    # loads existing JSON data if it exists
+    try:
+        with open(ITEMS_FILE, "r", encoding="utf-16") as f:
+            existing_items = json.load(f)
+    except FileNotFoundError:
+        existing_items = {}
+
+    updated_items = {}
+    seen_items = set()
+    changes_made = False
+
+    # clears previous log
+    with open(LOG_FILE, "w", encoding="utf-16") as f:
+        f.write(f"=== Update Log: {datetime.now().isoformat()} ===\n\n")
+
     item_links = get_item_links()
-    all_items = {}
+
     for link in item_links:
         try:
-            name, crafting_stations, ingredients = parse_item_page(link)
-            if name:
-                print(name)
-                all_items[name] = {"fabricators": crafting_stations, "ingredients": ingredients}
-                print(all_items[name])
+            name, fabricators, ingredients = parse_item_page(link)
+            if not name:
+                continue
+
+            seen_items.add(name)
+
+            new_data = {
+                "fabricators": sorted(
+                    [s.replace(" (page does not exist)", "") for s in fabricators],
+                    key=str.lower,
+                ),
+                "ingredients": sort_ingredients(ingredients),
+            }
+
+            if name not in existing_items:
+                print(f"+ Added: {name}")
+                log_change(name, "added", new=new_data)
+                changes_made = True
+            elif has_changed(existing_items[name], new_data):
+                print(f"~ Updated: {name}")
+                log_change(name, "updated", old=existing_items[name], new=new_data)
+                changes_made = True
+            else:
+                print(f"= Unchanged: {name}")
+                log_change(name, "unchanged")
+
+            updated_items[name] = new_data
+
         except Exception as e:
             print(f"Failed to parse {link}: {e}")
         time.sleep(0.5)
-    with open("items.json", "w", encoding="utf-8") as f:
-        json.dump(all_items, f, indent=2, ensure_ascii=False)
+
+    # preserve missing items - for manually added or deleted (for any reason) from wiki
+    missing = set(existing_items) - seen_items
+    for name in missing:
+        updated_items[name] = existing_items[name]
+        print(f"- Missing from wiki (preserved): {name}")
+        log_change(name, "missing (preserved)")
+
+    # save to file sorted alphabetically both ingredients, fabricators and key themselves
+    sorted_items = dict(sorted(updated_items.items(), key=lambda x: x[0].lower()))
+    with open(ITEMS_FILE, "w", encoding="utf-16") as f:
+        json.dump(sorted_items, f, indent=2, ensure_ascii=False)
+
+    if changes_made or missing:
+        print(f"\nLog of changes written to: {LOG_FILE}")
+    else:
+        print(f"\nNo changes made. {LOG_FILE} still updated with status logs.")
+
 
 if __name__ == "__main__":
-    main()
+    swiper()
