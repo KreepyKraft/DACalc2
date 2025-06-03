@@ -193,8 +193,8 @@ def swiper():
                 log_change(name, "updated", old=existing_items[name], new=new_data)
                 changes_made = True
             else:
-                print(f"= Unchanged: {name}")
-                log_change(name, "unchanged")
+                print(f"= Unchanged: {name} -- Not logging")
+                # log_change(name, "unchanged")
 
             updated_items[name] = new_data
 
