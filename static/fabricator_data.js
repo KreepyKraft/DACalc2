@@ -1,7 +1,7 @@
 // Fabricator data structure
 const fabricators = {
     "General Fabricators": [
-        { id: "persona-fabricator", name: "Persona Fabricator" },
+        { id: "personal-fabricator", name: "Personal Fabricator" },
         { id: "survival-fabricator", name: "Survival Fabricator" },
         { id: "fabricator", name: "Fabricator" }
     ],
