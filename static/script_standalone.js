@@ -1,5 +1,6 @@
 let itemsList = [];
 
+
 function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
 }
@@ -10,119 +11,141 @@ async function fetchItems() {
         return;
     }
 
-    itemsList = Object.entries(ITEM_DATA)
-        .filter(([_, data]) => data.ingredients && Object.keys(data.ingredients).length > 0)
-        .map(([name, _]) => name);
+    itemsList = Object.keys(ITEM_DATA).filter(name => {
+        const data = ITEM_DATA[name];
+        return data.ingredients && Object.keys(data.ingredients).length > 0;
+    });
+    // Sort itemsList alphabetically for better usability in dropdown
+    itemsList.sort();
 
     window.itemDetails = ITEM_DATA;
 
-    addItem(); // add one item row by default
-    renderFabricatorCheckboxes(); // render fabricator checkboxes on load
+    addItem(); // Add one item row by default
+    renderFabricatorCheckboxes(); // Render fabricator checkboxes on load
 }
 
 function addItem() {
     const container = document.getElementById('items-container');
-    const div = document.createElement('div');
-    div.className = 'item-row';
+    const itemRowDiv = document.createElement('div');
+    itemRowDiv.classList.add('item-row');
 
-    const select = document.createElement('select');
-    select.innerHTML = '<option value="">--Select an Item--</option>'; // Add a default option
-    itemsList.forEach(item => {
-        const option = document.createElement('option');
-        option.value = item;
-        option.textContent = item;
-        select.appendChild(option);
+    // --- Custom Searchable Dropdown Elements ---
+    const customSelectWrapper = document.createElement('div');
+    customSelectWrapper.classList.add('custom-select-wrapper');
+
+    const searchInput = document.createElement('input');
+    searchInput.type = 'text';
+    searchInput.classList.add('custom-select-input');
+    searchInput.placeholder = 'Search or select an item...';
+    searchInput.setAttribute('autocomplete', 'off'); // Prevent browser autocomplete
+
+    // Hidden input to store the actual selected value
+    const hiddenInput = document.createElement('input');
+    hiddenInput.type = 'hidden';
+    hiddenInput.classList.add('selected-item-value'); // Add a class to easily select it later
+
+    const dropdownList = document.createElement('ul');
+    dropdownList.classList.add('custom-select-dropdown');
+
+    // Populate initial dropdown list
+    function populateDropdown(filter = '') {
+        dropdownList.innerHTML = ''; // Clear previous list
+        const lowerFilter = filter.toLowerCase();
+
+        // Create a "No selection" option
+        const noSelectionOption = document.createElement('li');
+        noSelectionOption.textContent = '--Select an Item--';
+        noSelectionOption.dataset.value = ''; // Empty value for no selection
+        dropdownList.appendChild(noSelectionOption);
+
+        itemsList.forEach(item => {
+            if (item.toLowerCase().includes(lowerFilter)) {
+                const listItem = document.createElement('li');
+                listItem.textContent = item;
+                listItem.dataset.value = item; // Store the actual item value
+                dropdownList.appendChild(listItem);
+            }
+        });
+    }
+
+    populateDropdown(); // Populate initially with all items
+
+    // Event Listeners for the custom dropdown
+    let blurTimeout; // To handle blur event delay
+
+    searchInput.addEventListener('input', () => {
+        const inputValue = searchInput.value;
+        populateDropdown(inputValue);
+        dropdownList.style.display = 'block'; // Show dropdown on input
+        hiddenInput.value = ''; // Clear hidden input if typing or filtering
     });
 
-    const input = document.createElement('input');
-    input.type = 'number';
-    input.min = '1';
-    input.value = '1';
+    searchInput.addEventListener('focus', () => {
+        clearTimeout(blurTimeout); // Clear any pending blur
+        populateDropdown(searchInput.value); // Repopulate on focus to show current filter
+        dropdownList.style.display = 'block';
+    });
+
+    searchInput.addEventListener('blur', () => {
+        // Delay hiding to allow click event on list items to register
+        blurTimeout = setTimeout(() => {
+            dropdownList.style.display = 'none';
+            // ONLY clear searchInput.value IF no valid selection was made
+            // (i.e., hiddenInput.value is still empty)
+            // If hiddenInput.value was set by a click, we should NOT clear searchInput.value
+            if (hiddenInput.value === '') {
+                searchInput.value = ''; // Clear display if nothing was selected
+            }
+        }, 150); // Small delay
+    });
+
+    dropdownList.addEventListener('mousedown', (event) => {
+        // Prevent searchInput from losing focus immediately when clicking on dropdown list
+        // This is crucial for allowing the click event on LI to fire before blur processes fully.
+        event.preventDefault();
+    });
+
+
+    dropdownList.addEventListener('click', (event) => {
+        if (event.target.tagName === 'LI') {
+            const selectedValue = event.target.dataset.value;
+            const selectedText = event.target.textContent;
+
+            searchInput.value = selectedText; // Display selected text in input
+            hiddenInput.value = selectedValue; // Store actual value
+            dropdownList.style.display = 'none'; // Hide dropdown
+            searchInput.focus(); // Re-focus the input after selection to clear the blur timeout
+        }
+    });
+
+    // Append custom dropdown elements
+    customSelectWrapper.appendChild(searchInput);
+    customSelectWrapper.appendChild(hiddenInput);
+    customSelectWrapper.appendChild(dropdownList);
+    // --- End Custom Searchable Dropdown Elements ---
+
+    const quantityInput = document.createElement('input');
+    quantityInput.type = 'number';
+    quantityInput.min = '1';
+    quantityInput.value = '1';
 
     const removeButton = document.createElement('button');
     removeButton.textContent = 'Remove';
-    removeButton.onclick = () => container.removeChild(div);
+    removeButton.onclick = () => container.removeChild(itemRowDiv); // Remove the whole row
 
-    div.appendChild(select);
-    div.appendChild(input);
-    div.appendChild(removeButton);
+    itemRowDiv.appendChild(customSelectWrapper); // Add the custom dropdown wrapper
+    itemRowDiv.appendChild(quantityInput);
+    itemRowDiv.appendChild(removeButton);
 
-    container.appendChild(div);
+    container.appendChild(itemRowDiv);
 }
 
-function renderFabricatorCheckboxes() {
-    const container = document.getElementById('fabricators-container');
-    if (!container) {
-        console.error("Fabricators container not found. Make sure an element with id 'fabricators-container' exists in your HTML.");
-        return;
-    }
-    container.innerHTML = ''; // Clear previous checkboxes
-
-    for (const category in fabricators) {
-        const categoryDiv = document.createElement('div');
-        categoryDiv.classList.add('fabricator-category');
-        
-        const categoryTitle = document.createElement('h3');
-        categoryTitle.textContent = category;
-        categoryDiv.appendChild(categoryTitle);
-
-        if (typeof fabricators[category] === 'object' && !Array.isArray(fabricators[category])) {
-            // this is a sub-category for refineries
-            for (const subCategory in fabricators[category]) {
-                const subCategoryDiv = document.createElement('div');
-                const subCategoryTitle = document.createElement('h4');
-                subCategoryTitle.textContent = subCategory;
-                subCategoryDiv.appendChild(subCategoryTitle);
-
-                fabricators[category][subCategory].forEach(fab => {
-                    const fabItemDiv = document.createElement('div');
-                    fabItemDiv.classList.add('fabricator-item');
-                    const checkbox = document.createElement('input');
-                    checkbox.type = 'checkbox';
-                    checkbox.id = fab.id;
-                    checkbox.value = fab.id;
-                    checkbox.name = "fabricator";
-                    // option 1: To make all checkboxes selected by default, uncomment the line below:
-                    // checkbox.checked = true; 
-                    const label = document.createElement('label');
-                    label.htmlFor = fab.id;
-                    label.textContent = fab.name;
-                    fabItemDiv.appendChild(checkbox);
-                    fabItemDiv.appendChild(label);
-                    subCategoryDiv.appendChild(fabItemDiv);
-                });
-                categoryDiv.appendChild(subCategoryDiv);
-            }
-        } else {
-            // general or Specialty Fabricators (simple array)
-            fabricators[category].forEach(fab => {
-                const fabItemDiv = document.createElement('div');
-                fabItemDiv.classList.add('fabricator-item');
-                const checkbox = document.createElement('input');
-                checkbox.type = 'checkbox';
-                checkbox.id = fab.id;
-                checkbox.value = fab.id;
-                checkbox.name = "fabricator";
-                // option 1: To make all checkboxes selected by default, uncomment the line below:
-                // checkbox.checked = true;
-                const label = document.createElement('label');
-                label.htmlFor = fab.id;
-                label.textContent = fab.name;
-                fabItemDiv.appendChild(checkbox);
-                fabItemDiv.appendChild(label);
-                categoryDiv.appendChild(fabItemDiv);
-            });
-        }
-        container.appendChild(categoryDiv);
-    }
-}
 
 function toggleAllFabricators(shouldBeChecked) {
     document.querySelectorAll('input[name="fabricator"]').forEach(checkbox => {
         checkbox.checked = shouldBeChecked;
     });
 }
-
 
 function getSelectedFabricators() {
     const selectedFabs = [];
@@ -136,7 +159,7 @@ function calculate() {
     const resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = ''; // Clear previous results
 
-    // get selected fabricators
+    // Get selected fabricators
     const selectedFabricators = getSelectedFabricators();
     if (selectedFabricators.length > 0) {
         const fabListDiv = document.createElement('div');
@@ -157,12 +180,20 @@ function calculate() {
     }
 
     const selections = [];
-    document.querySelectorAll('#items-container .item-row').forEach(div => {
-        const [select, input] = div.children;
-        selections.push({
-            item: select.value,
-            quantity: Number(input.value)
-        });
+    // IMPORTANT: Now we get the value from the hidden input, not a <select>
+    document.querySelectorAll('#items-container .item-row').forEach(rowDiv => {
+        const hiddenInput = rowDiv.querySelector('.selected-item-value');
+        const quantityInput = rowDiv.querySelector('input[type="number"]');
+
+        const itemId = hiddenInput ? hiddenInput.value : ''; // Get value from hidden input
+        const quantity = parseInt(quantityInput.value, 10);
+
+        if (itemId && !isNaN(quantity) && quantity > 0) {
+            selections.push({
+                item: itemId,
+                quantity: quantity
+            });
+        }
     });
 
     const totalMaterials = {};
@@ -185,7 +216,8 @@ function calculate() {
     }
 
     selections.forEach(({ item, quantity }) => {
-        if (item && quantity > 0) {
+        // Ensure the item exists in itemDetails before trying to process
+        if (window.itemDetails[item]) {
             breakdown[item] = {};
             trackBreakdown(item, quantity, breakdown[item]);
         }
@@ -261,8 +293,8 @@ function renderResults(total, breakdown) {
     totalCols.className = 'columns';
     totalCols.appendChild(makeCol('🧱', 'Non-Craftable', baseMaterials));
     totalCols.appendChild(makeCol('⚙️', 'Craftable', craftedMaterials));
-    totalCols.appendChild(makeCol('💧', 'Water in mL', waterMaterials, true)); // hide names
-    totalCols.appendChild(makeCol('⏳', 'Time in seconds', timeMaterials, true)); // hide names
+    totalCols.appendChild(makeCol('💧', 'Water in mL', waterMaterials, true));
+    totalCols.appendChild(makeCol('⏳', 'Time in seconds', timeMaterials, true));
 
     totalDiv.appendChild(totalCols);
 
@@ -295,8 +327,8 @@ function renderResults(total, breakdown) {
 
         itemCols.appendChild(makeCol('🧱', 'Non-Craftable', bBase));
         itemCols.appendChild(makeCol('⚙️', 'Craftable', bCrafted));
-        itemCols.appendChild(makeCol('💧', 'Water in mL', bWater, true)); // hide names
-        itemCols.appendChild(makeCol('⏳', 'Time in seconds', bTime, true)); // hide names
+        itemCols.appendChild(makeCol('💧', 'Water in mL', bWater, true));
+        itemCols.appendChild(makeCol('⏳', 'Time in seconds', bTime, true));
 
         breakdownDiv.appendChild(itemCols);
     }

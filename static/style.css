@@ -1,7 +1,7 @@
 /* Compact Styles */
 :root {
   /* Font & base sizing */
-  --font-stack: -apple-system, BlinkMacMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --fs-base: 0.8rem;
   --fs-header: 0.9rem;
 
@@ -10,6 +10,7 @@
   --bg-light: #f9f9f9; /* Used for sections background */
   --bg-col: #fff; /* Used for column background */
   --accent: #1e90ff; /* Blue accent */
+  --border-color: rgba(0,0,0,0.1);
 
   /* Spacing & layout */
   --radius: 4px;
@@ -24,6 +25,7 @@
   --bg-col: #2a2a2a;
   --accent: #87cefa; /* Lighter blue accent */
   --dune-yellow: #d4c47c; /* Dune specific yellow */
+  --border-color: rgba(255,255,255,0.1);
 }
 
 /* Base elements */
@@ -67,22 +69,25 @@ button:hover {
 }
 
 select,
-input[type="number"] {
+input[type="number"],
+.custom-select-input {
   padding: var(--gap);
   font-size: 1em;
   background-color: var(--bg-col);
   color: var(--text-color);
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid var(--border-color);
   border-radius: var(--radius);
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  box-sizing: border-box; /* Ensures padding doesn't increase width */
 }
 
 /* Dark mode for inputs and selects */
 .dark-mode select,
-.dark-mode input[type="number"] {
+.dark-mode input[type="number"],
+.dark-mode .custom-select-input {
   background-color: var(--bg-col);
   color: var(--text-color);
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid var(--border-color);
 }
 
 
@@ -116,7 +121,7 @@ input[type="number"] {
   margin: 0 0 var(--small-gap) 0;
   font-size: var(--fs-header);
   color: var(--accent);
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid var(--border-color);
   padding-bottom: var(--small-gap);
   text-align: left; /* Align text left */
 }
@@ -175,26 +180,24 @@ input[type="number"] {
 
 /* --- Fabricator Specific Styles --- */
 .fabricator-category {
-    /* Each main category (General, Refineries, Specialty) forms a 'column' */
-    background: var(--bg-col); /* Inherit column background */
+    background: var(--bg-col);
     border-radius: var(--radius);
     padding: var(--small-gap);
-    box-shadow: inset 0 1px 2px rgba(0,0,0,0.05); /* Similar to column card */
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
     transition: background 0.3s, box-shadow 0.3s;
 }
 
 .fabricator-section .columns {
-    /* Ensure the fabricator columns don't override the main columns class too much */
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Adjust column width for fabricators */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
 
 .fabricator-category h3 {
-    font-size: var(--fs-header); /* Slightly larger for main categories */
-    font-weight: 700; /* Bolder */
+    font-size: var(--fs-header);
+    font-weight: 700;
     margin: 0 0 var(--small-gap) 0;
     color: var(--accent);
     padding-bottom: var(--small-gap);
-    border-bottom: 1px solid rgba(0,0,0,0.05); /* Lighter border */
+    border-bottom: 1px solid var(--border-color);
 }
 
 .fabricator-category h4 {
@@ -202,40 +205,90 @@ input[type="number"] {
     font-weight: 600;
     margin: var(--small-gap) 0;
     color: var(--text-color);
-    padding-left: var(--small-gap); /* Indent sub-categories */
+    padding-left: var(--small-gap);
 }
 
 .fabricator-item {
     margin-bottom: var(--small-gap);
     display: flex;
     align-items: center;
-    padding-left: calc(var(--small-gap) * 2); /* Indent checkboxes more */
+    padding-left: calc(var(--small-gap) * 2);
 }
 
 .fabricator-item input[type="checkbox"] {
     margin-right: var(--small-gap);
-    accent-color: var(--accent); /* Use accent color for checkbox itself */
+    accent-color: var(--accent);
 }
 
 .fabricator-item label {
     color: var(--text-color);
-    cursor: pointer; /* Indicate it's clickable */
+    cursor: pointer;
 }
 
 /* Fabricator Control Buttons */
 .fabricator-controls {
     margin-bottom: var(--gap);
-    text-align: center; /* Center the buttons */
-    display: flex; /* Use flexbox for buttons */
-    justify-content: center; /* Center horizontally */
-    gap: var(--gap); /* Space between buttons */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: var(--gap);
 }
 
 .fabricator-controls button {
-    /* Adjust button styling slightly if needed for this section */
     padding: var(--small-gap) var(--gap);
     font-size: var(--fs-base);
-    margin: 0; /* Remove default button margin */
+    margin: 0;
+}
+
+
+/* --- Custom Searchable Dropdown Styles --- */
+.custom-select-wrapper {
+    position: relative; /* Essential for dropdown positioning */
+    flex-grow: 1; /* Allows it to expand in the item-row */
+}
+
+.custom-select-input {
+    width: 100%; /* Fill wrapper width */
+}
+
+.custom-select-dropdown {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%; /* Position below the input */
+    left: 0;
+    right: 0;
+    max-height: 200px; /* Limit height for scrollability */
+    overflow-y: auto;
+    background-color: var(--bg-col);
+    border: 1px solid var(--border-color);
+    border-top: none; /* No top border to blend with input */
+    border-radius: 0 0 var(--radius) var(--radius); /* Rounded bottom corners */
+    z-index: 100; /* Ensure it appears above other content */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: none; /* Hidden by default */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.dark-mode .custom-select-dropdown {
+    background-color: var(--bg-col);
+    border: 1px solid var(--border-color);
+    border-top: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.custom-select-dropdown li {
+    padding: var(--small-gap) var(--gap);
+    cursor: pointer;
+    color: var(--text-color);
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.custom-select-dropdown li:hover,
+.custom-select-dropdown li.selected { /* Style for keyboard navigation selection */
+    background-color: var(--accent);
+    color: var(--bg-col);
 }
 
 /* Dark mode overrides */
@@ -247,13 +300,13 @@ input[type="number"] {
   box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
 .dark-mode .column,
-.dark-mode .fabricator-category { /* Apply dark mode to fabricator columns too */
+.dark-mode .fabricator-category {
   background: var(--bg-col);
-  box-shadow: inset 0 1px 2px rgba(255,255,255,0.05); /* Darker inset shadow */
+  box-shadow: inset 0 1px 2px rgba(255,255,255,0.05);
 }
 .dark-mode .material-item,
 .dark-mode .breakdown-item,
-.dark-mode .fabricator-item label { /* Ensure labels are dark mode */
+.dark-mode .fabricator-item label {
   color: var(--text-color);
 }
 
@@ -262,12 +315,12 @@ input[type="number"] {
 .dark-mode .results-section > h3,
 .dark-mode .fabricator-section h2,
 .dark-mode .fabricator-category h3 {
-    color: var(--dune-yellow); /* Dune yellow for main headings in dark mode */
+    color: var(--dune-yellow);
     border-bottom-color: rgba(255,255,255,0.1);
 }
 
 .dark-mode .fabricator-category h4 {
-    color: var(--text-color); /* Keep sub-category titles readable in dark mode */
+    color: var(--text-color);
 }
 
 
