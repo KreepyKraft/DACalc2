@@ -1,6 +1,5 @@
 let itemsList = [];
 
-
 function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
 }
@@ -92,7 +91,6 @@ function addItem() {
             dropdownList.style.display = 'none';
             // ONLY clear searchInput.value IF no valid selection was made
             // (i.e., hiddenInput.value is still empty)
-            // If hiddenInput.value was set by a click, we should NOT clear searchInput.value
             if (hiddenInput.value === '') {
                 searchInput.value = ''; // Clear display if nothing was selected
             }
@@ -101,10 +99,8 @@ function addItem() {
 
     dropdownList.addEventListener('mousedown', (event) => {
         // Prevent searchInput from losing focus immediately when clicking on dropdown list
-        // This is crucial for allowing the click event on LI to fire before blur processes fully.
         event.preventDefault();
     });
-
 
     dropdownList.addEventListener('click', (event) => {
         if (event.target.tagName === 'LI') {
@@ -141,6 +137,78 @@ function addItem() {
 }
 
 
+function renderFabricatorCheckboxes() {
+    console.log("Attempting to render fabricator checkboxes.");
+    const container = document.getElementById('fabricators-container');
+    if (!container) {
+        console.error("Fabricators container not found. Make sure an element with id 'fabricators-container' exists in your HTML.");
+        return;
+    }
+    console.log("Fabricators container found:", container);
+    container.innerHTML = ''; // Clear previous checkboxes
+    console.log("Container cleared. Starting to build checkboxes.");
+
+    if (Object.keys(fabricators).length === 0) {
+        console.warn("Fabricators data is empty. No checkboxes will be rendered.");
+        return;
+    }
+
+    for (const category in fabricators) {
+        const categoryDiv = document.createElement('div');
+        categoryDiv.classList.add('fabricator-category');
+        
+        const categoryTitle = document.createElement('h3');
+        categoryTitle.textContent = category;
+        categoryDiv.appendChild(categoryTitle);
+
+        if (typeof fabricators[category] === 'object' && !Array.isArray(fabricators[category])) {
+            // This is a sub-category for refineries
+            for (const subCategory in fabricators[category]) {
+                const subCategoryDiv = document.createElement('div');
+                const subCategoryTitle = document.createElement('h4');
+                subCategoryTitle.textContent = subCategory;
+                subCategoryDiv.appendChild(subCategoryTitle);
+
+                fabricators[category][subCategory].forEach(fab => {
+                    const fabItemDiv = document.createElement('div');
+                    fabItemDiv.classList.add('fabricator-item');
+                    const checkbox = document.createElement('input');
+                    checkbox.type = 'checkbox';
+                    checkbox.id = fab.id;
+                    checkbox.value = fab.id;
+                    checkbox.name = "fabricator";
+                    const label = document.createElement('label');
+                    label.htmlFor = fab.id;
+                    label.textContent = fab.name;
+                    fabItemDiv.appendChild(checkbox);
+                    fabItemDiv.appendChild(label);
+                    subCategoryDiv.appendChild(fabItemDiv);
+                });
+                categoryDiv.appendChild(subCategoryDiv);
+            }
+        } else {
+            // General or Specialty Fabricators (simple array)
+            fabricators[category].forEach(fab => {
+                const fabItemDiv = document.createElement('div');
+                fabItemDiv.classList.add('fabricator-item');
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.id = fab.id;
+                checkbox.value = fab.id;
+                checkbox.name = "fabricator";
+                const label = document.createElement('label');
+                label.htmlFor = fab.id;
+                label.textContent = fab.name;
+                fabItemDiv.appendChild(checkbox);
+                fabItemDiv.appendChild(label);
+                categoryDiv.appendChild(fabItemDiv);
+            });
+        }
+        container.appendChild(categoryDiv);
+    }
+    console.log("Finished rendering fabricator checkboxes.");
+}
+
 function toggleAllFabricators(shouldBeChecked) {
     document.querySelectorAll('input[name="fabricator"]').forEach(checkbox => {
         checkbox.checked = shouldBeChecked;
@@ -159,33 +227,21 @@ function calculate() {
     const resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = ''; // Clear previous results
 
-    // Get selected fabricators
     const selectedFabricators = getSelectedFabricators();
-    if (selectedFabricators.length > 0) {
-        const fabListDiv = document.createElement('div');
-        fabListDiv.innerHTML = '<h3>Selected Fabricators/Refineries:</h3>';
-        const ul = document.createElement('ul');
-        selectedFabricators.forEach(fabId => {
-            const readableName = fabId.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
-            const li = document.createElement('li');
-            li.textContent = readableName;
-            ul.appendChild(li);
-        });
-        fabListDiv.appendChild(ul);
-        resultsDiv.appendChild(fabListDiv);
-    } else {
+
+    if (selectedFabricators.length === 0) {
         const noFabMessage = document.createElement('p');
         noFabMessage.textContent = 'No fabricators or refineries selected. This calculator assumes you have the necessary fabricators to craft the items.';
         resultsDiv.appendChild(noFabMessage);
     }
 
+
     const selections = [];
-    // IMPORTANT: Now we get the value from the hidden input, not a <select>
     document.querySelectorAll('#items-container .item-row').forEach(rowDiv => {
         const hiddenInput = rowDiv.querySelector('.selected-item-value');
         const quantityInput = rowDiv.querySelector('input[type="number"]');
 
-        const itemId = hiddenInput ? hiddenInput.value : ''; // Get value from hidden input
+        const itemId = hiddenInput ? hiddenInput.value : '';
         const quantity = parseInt(quantityInput.value, 10);
 
         if (itemId && !isNaN(quantity) && quantity > 0) {
@@ -216,7 +272,6 @@ function calculate() {
     }
 
     selections.forEach(({ item, quantity }) => {
-        // Ensure the item exists in itemDetails before trying to process
         if (window.itemDetails[item]) {
             breakdown[item] = {};
             trackBreakdown(item, quantity, breakdown[item]);
