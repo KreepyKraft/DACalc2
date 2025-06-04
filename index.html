@@ -10,56 +10,8 @@
   <meta name="apple-mobile-web-app-title" content="DA Calculator" />
   <link rel="manifest" href="static/favicon/site.webmanifest" />
   <meta charset="UTF-8">
-  <title>DA Material Calculator</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 2em;
-      max-width: 800px;
-      margin: auto;
-      background: #f4f4f4;
-      color: #333;
-    }
-
-    h1, h2 {
-      text-align: center;
-    }
-
-    .item-row {
-      display: flex;
-      gap: 1em;
-      margin-bottom: 1em;
-    }
-
-    select, input[type="number"] {
-      padding: 0.5em;
-      font-size: 1em;
-    }
-
-    button {
-      margin: 0.5em;
-      padding: 0.5em 1em;
-      font-size: 1em;
-      cursor: pointer;
-    }
-
-    .results-section {
-      background: #fff;
-      padding: 1em;
-      border-radius: 8px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    }
-
-    .material-item, .breakdown-item {
-      margin-bottom: 0.5em;
-    }
-
-    .item-title {
-      font-weight: bold;
-      margin-top: 1em;
-    }
-  </style>
-</head>
+  <title>Dune Awakening Material Calculator</title>
+  </head>
 <body>
   <h1>Dune Awakening Material Calculator</h1>
 
@@ -68,11 +20,16 @@
   <button onclick="calculate()">Calculate</button>
   <button id="theme-toggle" aria-label="Toggle dark mode" class="theme-toggle">🌙</button>
 
+  <div class="fabricator-section">
+    <h2>Available Fabricators and Refineries</h2>
+    <div id="fabricators-container" class="columns"></div>
+  </div>
 
   <h2>Results</h2>
   <div id="results" class="results-section"></div>
 
   <script src="static/item_data.js"></script>
+  <script src="static/fabricator_data.js"></script>
   <script src="static/script_standalone.js"></script>
 </body>
 </html>

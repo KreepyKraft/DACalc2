@@ -1,17 +1,15 @@
-
-
 /* Compact Styles */
 :root {
   /* Font & base sizing */
-  --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-stack: -apple-system, BlinkMacMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --fs-base: 0.8rem;
   --fs-header: 0.9rem;
 
   /* Colors */
   --text-color: #333;
-  --bg-light: #f9f9f9;
-  --bg-col: #fff;
-  --accent: #1e90ff;
+  --bg-light: #f9f9f9; /* Used for sections background */
+  --bg-col: #fff; /* Used for column background */
+  --accent: #1e90ff; /* Blue accent */
 
   /* Spacing & layout */
   --radius: 4px;
@@ -24,49 +22,103 @@
   --text-color: #ddd;
   --bg-light: #1e1e1e;
   --bg-col: #2a2a2a;
-  --accent: #87cefa;
-  --dune-yellow: #d4c47c;
+  --accent: #87cefa; /* Lighter blue accent */
+  --dune-yellow: #d4c47c; /* Dune specific yellow */
 }
 
-:root.dark-mode h2,
-:root.dark-mode h1 {
-  color: var(--dune-yellow);
-}
-
-
-/* Page setup */
+/* Base elements */
 body {
   font-family: var(--font-stack);
   color: var(--text-color);
   font-size: var(--fs-base);
-  background: var(--bg-light);
+  background: var(--bg-light); /* Body background uses bg-light for consistency */
+  padding: 2em;
+  max-width: 800px;
+  margin: auto;
   transition: background 0.3s, color 0.3s;
 }
 
-#results {
-  padding: var(--gap);
+h1, h2 {
+  text-align: center;
+  color: var(--text-color); /* Default text color for headers */
+  transition: color 0.3s;
 }
 
-/* Sections container */
-.material-list,
-.breakdown {
-  background: var(--bg-light);
-  padding: var(--small-gap);
+/* Dark mode specific header colors */
+:root.dark-mode h1,
+:root.dark-mode h2 {
+  color: var(--dune-yellow);
+}
+
+/* Buttons and Inputs */
+button {
+  margin: var(--gap);
+  padding: var(--gap) 1em;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: var(--accent);
+  color: var(--bg-col); /* Text color for buttons */
+  border: none;
   border-radius: var(--radius);
-  margin-top: var(--small-gap);
-  margin-bottom: var(--small-gap);
+  transition: background-color 0.3s;
+}
+button:hover {
+  opacity: 0.9;
+}
+
+select,
+input[type="number"] {
+  padding: var(--gap);
+  font-size: 1em;
+  background-color: var(--bg-col);
+  color: var(--text-color);
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: var(--radius);
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Dark mode for inputs and selects */
+.dark-mode select,
+.dark-mode input[type="number"] {
+  background-color: var(--bg-col);
+  color: var(--text-color);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+
+/* Item Row (for adding/removing items to calculate) */
+.item-row {
+  display: flex;
+  gap: var(--gap);
+  margin-bottom: var(--gap);
+  align-items: center; /* Vertically align items */
+}
+
+/* Sections container (Results, Fabricators) */
+.material-list,
+.breakdown,
+.results-section, /* Apply to results section too for consistency */
+.fabricator-section { /* Apply to fabricator section as well */
+  background: var(--bg-light);
+  padding: var(--gap); /* Use var(--gap) for consistent padding */
+  border-radius: var(--radius);
+  margin-top: var(--gap);
+  margin-bottom: var(--gap);
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  transition: background 0.3s;
+  transition: background 0.3s, box-shadow 0.3s;
 }
 
 /* Section titles */
 .material-list > h3,
-.breakdown > h3 {
+.breakdown > h3,
+.results-section > h3,
+.fabricator-section h2 { /* Targeting h2 for fabricator section title */
   margin: 0 0 var(--small-gap) 0;
   font-size: var(--fs-header);
   color: var(--accent);
   border-bottom: 1px solid rgba(0,0,0,0.1);
   padding-bottom: var(--small-gap);
+  text-align: left; /* Align text left */
 }
 
 /* Grid: 4 columns, compact */
@@ -83,7 +135,7 @@ body {
   border-radius: var(--radius);
   padding: var(--small-gap);
   box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
-  transition: background 0.3s;
+  transition: background 0.3s, box-shadow 0.3s;
 }
 
 /* Column headers */
@@ -121,31 +173,96 @@ body {
   grid-column: span 4;
 }
 
-/* Dark mode overrides for elements */
-.dark-mode body {
-  background: var(--bg-light);
+/* --- Fabricator Specific Styles --- */
+.fabricator-category {
+    /* Each main category (General, Refineries, Specialty) forms a 'column' */
+    background: var(--bg-col); /* Inherit column background */
+    border-radius: var(--radius);
+    padding: var(--small-gap);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.05); /* Similar to column card */
+    transition: background 0.3s, box-shadow 0.3s;
 }
+
+.fabricator-section .columns {
+    /* Ensure the fabricator columns don't override the main columns class too much */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Adjust column width for fabricators */
+}
+
+.fabricator-category h3 {
+    font-size: var(--fs-header); /* Slightly larger for main categories */
+    font-weight: 700; /* Bolder */
+    margin: 0 0 var(--small-gap) 0;
+    color: var(--accent);
+    padding-bottom: var(--small-gap);
+    border-bottom: 1px solid rgba(0,0,0,0.05); /* Lighter border */
+}
+
+.fabricator-category h4 {
+    font-size: var(--fs-base);
+    font-weight: 600;
+    margin: var(--small-gap) 0;
+    color: var(--text-color);
+    padding-left: var(--small-gap); /* Indent sub-categories */
+}
+
+.fabricator-item {
+    margin-bottom: var(--small-gap);
+    display: flex;
+    align-items: center;
+    padding-left: calc(var(--small-gap) * 2); /* Indent checkboxes more */
+}
+
+.fabricator-item input[type="checkbox"] {
+    margin-right: var(--small-gap);
+    accent-color: var(--accent); /* Use accent color for checkbox itself */
+}
+
+.fabricator-item label {
+    color: var(--text-color);
+    cursor: pointer; /* Indicate it's clickable */
+}
+
+/* Dark mode overrides */
 .dark-mode .material-list,
-.dark-mode .breakdown {
+.dark-mode .breakdown,
+.dark-mode .results-section,
+.dark-mode .fabricator-section {
   background: var(--bg-light);
   box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
-.dark-mode .column {
+.dark-mode .column,
+.dark-mode .fabricator-category { /* Apply dark mode to fabricator columns too */
   background: var(--bg-col);
+  box-shadow: inset 0 1px 2px rgba(255,255,255,0.05); /* Darker inset shadow */
 }
 .dark-mode .material-item,
-.dark-mode .breakdown-item {
+.dark-mode .breakdown-item,
+.dark-mode .fabricator-item label { /* Ensure labels are dark mode */
   color: var(--text-color);
 }
 
-.dark-mode .results-section {
-  background: var(--bg-col);
+.dark-mode .material-list > h3,
+.dark-mode .breakdown > h3,
+.dark-mode .results-section > h3,
+.dark-mode .fabricator-section h2,
+.dark-mode .fabricator-category h3 {
+    color: var(--dune-yellow); /* Dune yellow for main headings in dark mode */
+    border-bottom-color: rgba(255,255,255,0.1);
 }
+
+.dark-mode .fabricator-category h4 {
+    color: var(--text-color); /* Keep sub-category titles readable in dark mode */
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 800px) {
-  .columns { grid-template-columns: repeat(2, 1fr); }
+  .columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (max-width: 500px) {
-  .columns { grid-template-columns: 1fr; }
+  .columns {
+    grid-template-columns: 1fr;
+  }
 }
