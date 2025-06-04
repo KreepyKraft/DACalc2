@@ -5,8 +5,6 @@ function toggleDarkMode() {
 }
 
 async function fetchItems() {
-    // Ensure ITEM_DATA is available globally or passed here
-    // Assuming ITEM_DATA is loaded from item_data.js
     if (typeof ITEM_DATA === 'undefined') {
         console.error("ITEM_DATA is not defined. Make sure item_data.js is loaded correctly.");
         return;
@@ -18,8 +16,8 @@ async function fetchItems() {
 
     window.itemDetails = ITEM_DATA;
 
-    addItem(); // Add one item row by default
-    renderFabricatorCheckboxes(); // Render fabricator checkboxes on load
+    addItem(); // add one item row by default
+    renderFabricatorCheckboxes(); // render fabricator checkboxes on load
 }
 
 function addItem() {
@@ -69,6 +67,7 @@ function renderFabricatorCheckboxes() {
         categoryDiv.appendChild(categoryTitle);
 
         if (typeof fabricators[category] === 'object' && !Array.isArray(fabricators[category])) {
+            // this is a sub-category for refineries
             for (const subCategory in fabricators[category]) {
                 const subCategoryDiv = document.createElement('div');
                 const subCategoryTitle = document.createElement('h4');
@@ -83,6 +82,8 @@ function renderFabricatorCheckboxes() {
                     checkbox.id = fab.id;
                     checkbox.value = fab.id;
                     checkbox.name = "fabricator";
+                    // option 1: To make all checkboxes selected by default, uncomment the line below:
+                    // checkbox.checked = true; 
                     const label = document.createElement('label');
                     label.htmlFor = fab.id;
                     label.textContent = fab.name;
@@ -93,6 +94,7 @@ function renderFabricatorCheckboxes() {
                 categoryDiv.appendChild(subCategoryDiv);
             }
         } else {
+            // general or Specialty Fabricators (simple array)
             fabricators[category].forEach(fab => {
                 const fabItemDiv = document.createElement('div');
                 fabItemDiv.classList.add('fabricator-item');
@@ -101,6 +103,8 @@ function renderFabricatorCheckboxes() {
                 checkbox.id = fab.id;
                 checkbox.value = fab.id;
                 checkbox.name = "fabricator";
+                // option 1: To make all checkboxes selected by default, uncomment the line below:
+                // checkbox.checked = true;
                 const label = document.createElement('label');
                 label.htmlFor = fab.id;
                 label.textContent = fab.name;
@@ -113,6 +117,13 @@ function renderFabricatorCheckboxes() {
     }
 }
 
+function toggleAllFabricators(shouldBeChecked) {
+    document.querySelectorAll('input[name="fabricator"]').forEach(checkbox => {
+        checkbox.checked = shouldBeChecked;
+    });
+}
+
+
 function getSelectedFabricators() {
     const selectedFabs = [];
     document.querySelectorAll('input[name="fabricator"]:checked').forEach(checkbox => {
@@ -123,7 +134,7 @@ function getSelectedFabricators() {
 
 function calculate() {
     const resultsDiv = document.getElementById('results');
-    resultsDiv.innerHTML = ''; // clear previous results
+    resultsDiv.innerHTML = ''; // Clear previous results
 
     // get selected fabricators
     const selectedFabricators = getSelectedFabricators();
@@ -132,7 +143,6 @@ function calculate() {
         fabListDiv.innerHTML = '<h3>Selected Fabricators/Refineries:</h3>';
         const ul = document.createElement('ul');
         selectedFabricators.forEach(fabId => {
-            // format the fabricator ID into a more readable name
             const readableName = fabId.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
             const li = document.createElement('li');
             li.textContent = readableName;
@@ -165,14 +175,10 @@ function calculate() {
         for (const [ingredient, amt] of Object.entries(data.ingredients)) {
             const total = amt * quantity;
 
-            // track in this item's breakdown
             target[ingredient] = (target[ingredient] || 0) + total;
-
-            // always count toward total materials
             totalMaterials[ingredient] = (totalMaterials[ingredient] || 0) + total;
 
             if (window.itemDetails[ingredient] && window.itemDetails[ingredient].ingredients) {
-                // if it's craftable, recurse deeper
                 trackBreakdown(ingredient, total, target);
             }
         }
@@ -196,13 +202,11 @@ function flattenIngredients(item, quantity) {
     for (const [ingredient, amt] of Object.entries(data.ingredients)) {
         const total = amt * quantity;
         if (window.itemDetails[ingredient] && window.itemDetails[ingredient].ingredients) {
-            // it means it's crafteable = recurse
             const subIngredients = flattenIngredients(ingredient, total);
             for (const [subMat, subAmt] of Object.entries(subIngredients)) {
                 result[subMat] = (result[subMat] || 0) + subAmt;
             }
         } else {
-            // no need to recurse
             result[ingredient] = (result[ingredient] || 0) + total;
         }
     }
@@ -220,7 +224,6 @@ function renderResults(total, breakdown) {
     const isWater = mat => mat === 'Water';
     const isTime = mat => mat === 'Time';
 
-    // split totals
     const baseMaterials = {};
     const craftedMaterials = {};
     const waterMaterials = {};
@@ -233,7 +236,6 @@ function renderResults(total, breakdown) {
         else baseMaterials[mat] = amt;
     }
 
-    // helper to build a column
     const makeCol = (emoji, headerText, items, hideNames = false) => {
         const col = document.createElement('div');
         col.className = 'column';
@@ -249,7 +251,6 @@ function renderResults(total, breakdown) {
         return col;
     };
 
-    // total materials section
     const totalDiv = document.createElement('div');
     totalDiv.className = 'material-list';
     totalDiv.appendChild(Object.assign(document.createElement('h3'), {
@@ -265,7 +266,6 @@ function renderResults(total, breakdown) {
 
     totalDiv.appendChild(totalCols);
 
-    // breakdown section
     const breakdownDiv = document.createElement('div');
     breakdownDiv.className = 'breakdown';
     breakdownDiv.appendChild(Object.assign(document.createElement('h3'), {
@@ -273,13 +273,11 @@ function renderResults(total, breakdown) {
     }));
 
     for (const [itemName, mats] of Object.entries(breakdown)) {
-        // item title
         const title = document.createElement('div');
         title.className = 'item-title';
         title.textContent = `📦 ${itemName}`;
         breakdownDiv.appendChild(title);
 
-        // split this item's breakdown
         const bBase = {};
         const bCrafted = {};
         const bWater = {};
@@ -310,7 +308,6 @@ function renderResults(total, breakdown) {
 document.addEventListener('DOMContentLoaded', () => {
     const btn = document.getElementById('theme-toggle');
     const root = document.documentElement;
-    // load saved or default
     const current = localStorage.getItem('theme') || 'dark';
     console.log('Theme toggle script loaded, current theme:', current);
     root.classList.toggle('dark-mode', current === 'dark');
@@ -323,5 +320,5 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Toggle clicked, isDark:', isDark);
     });
 
-    fetchItems(); // call fetchItems on DOMContentLoaded to initialize items and fabricators
+    fetchItems();
 });

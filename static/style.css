@@ -222,6 +222,22 @@ input[type="number"] {
     cursor: pointer; /* Indicate it's clickable */
 }
 
+/* Fabricator Control Buttons */
+.fabricator-controls {
+    margin-bottom: var(--gap);
+    text-align: center; /* Center the buttons */
+    display: flex; /* Use flexbox for buttons */
+    justify-content: center; /* Center horizontally */
+    gap: var(--gap); /* Space between buttons */
+}
+
+.fabricator-controls button {
+    /* Adjust button styling slightly if needed for this section */
+    padding: var(--small-gap) var(--gap);
+    font-size: var(--fs-base);
+    margin: 0; /* Remove default button margin */
+}
+
 /* Dark mode overrides */
 .dark-mode .material-list,
 .dark-mode .breakdown,
