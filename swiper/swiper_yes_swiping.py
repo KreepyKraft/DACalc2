@@ -9,7 +9,7 @@ import difflib
 from datetime import datetime
 
 BASE_URL = "https://awakening.wiki"
-CATEGORY_URL = f"{BASE_URL}/Category:Items"
+CATEGORY_URL = f"{BASE_URL}/index.php?title=Category:Items"
 
 USER_AGENTS = [
     # Chrome
@@ -45,16 +45,33 @@ def load_existing_items():
 def get_item_links():
     item_links = []
     next_page = CATEGORY_URL
-    while next_page:
+    visited = set()
+
+    while next_page and next_page not in visited:
+        print(f"Fetching: {next_page}")
+        visited.add(next_page)
+
         response = requests.get(next_page, headers=get_random_headers())
         soup = BeautifulSoup(response.text, "html.parser")
+
+        # Extract item links
         for li in soup.select("div#mw-pages li a"):
             href = li.get("href")
             if href:
-                item_links.append(BASE_URL + href)
+                full_url = BASE_URL + href
+                item_links.append(full_url)
+
+        # Look for "next page" link in the pagination div
+        # pagination = soup.select_one("div#mw-pages a[href*='pageuntil=']")
+        # if pagination:
+        #     next_page = BASE_URL + pagination["href"]
+        # else:
+        #     next_page = None
         next_link = soup.find("a", string="next page")
         next_page = BASE_URL + next_link["href"] if next_link else None
-        time.sleep(0.5)
+
+        time.sleep(0.25)
+
     return item_links
 
 
@@ -178,6 +195,7 @@ def swiper():
 
             if not ingredients:
                 empty_items.append(name)
+                print(f"- Empty ingredients: {name} -- Ignoring")
 
             seen_items.add(name)
 
