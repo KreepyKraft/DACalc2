@@ -24,6 +24,7 @@ USER_AGENTS = [
 
 ITEMS_FILE = "data/items.json"
 LOG_FILE = "data/update_log.txt"
+EMPTY_ITEMS_FILE = "data/empty_items.json"
 
 
 def get_random_headers():
@@ -161,6 +162,7 @@ def swiper():
     updated_items = {}
     seen_items = set()
     changes_made = False
+    empty_items = []
 
     # clears previous log
     with open(LOG_FILE, "w", encoding="utf-16") as f:
@@ -173,6 +175,9 @@ def swiper():
             name, fabricators, ingredients = parse_item_page(link)
             if not name:
                 continue
+
+            if not ingredients:
+                empty_items.append(name)
 
             seen_items.add(name)
 
@@ -213,6 +218,9 @@ def swiper():
     sorted_items = dict(sorted(updated_items.items(), key=lambda x: x[0].lower()))
     with open(ITEMS_FILE, "w", encoding="utf-16") as f:
         json.dump(sorted_items, f, indent=2, ensure_ascii=False)
+
+    with open(EMPTY_ITEMS_FILE, "w", encoding="utf-16") as f:
+        json.dump(empty_items, f, indent=2, ensure_ascii=False)
 
     if changes_made or missing:
         print(f"\nLog of changes written to: {LOG_FILE}")
