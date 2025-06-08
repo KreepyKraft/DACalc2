@@ -1,4 +1,20 @@
 const ITEM_DATA = {
+  "A Dart for Every Man": {
+    "fabricators": [
+      "Advanced Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Fluted Light Caliber Compressor": 6,
+      "Mechanical Parts (1)": 21,
+      "Plastanium Ingot": 35,
+      "Plasteel Composite Gun Parts": 14,
+      "Silicone Block": 39,
+      "Spice Melange": 62,
+      "Spice-infused Plastanium Dust": 10,
+      "Time": 15.0,
+      "Water": 530
+    }
+  },
   "Abulurd's Rapture": {
     "fabricators": [
       "Weapons Fabricator"
@@ -99,6 +115,21 @@ const ITEM_DATA = {
       "Water": 1050
     }
   },
+  "Adept Burst Drillshot": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Duraluminum Ingot": 35,
+      "Gun Parts": 33,
+      "Heavy Caliber Compressor": 6,
+      "Mechanical Parts (1)": 13,
+      "Silicone Block": 30,
+      "Spice-infused Duraluminum Dust": 9,
+      "Time": 15.0,
+      "Water": 340
+    }
+  },
   "Adept Dirk": {
     "fabricators": [
       "Weapons Fabricator"
@@ -109,6 +140,161 @@ const ITEM_DATA = {
       "Duraluminum Ingot": 10,
       "Plant Fiber": 3,
       "Plasteel Microflora Fiber": 14,
+      "Time": 15.0,
+      "Water": 280
+    }
+  },
+  "Adept Disruptor M11": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Duraluminum Ingot": 25,
+      "Gun Parts": 23,
+      "Light Caliber Compressor": 5,
+      "Mechanical Parts (1)": 14,
+      "Silicone Block": 33,
+      "Time": 15.0,
+      "Water": 340
+    }
+  },
+  "Adept Disruptor Pistol": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Duraluminum Ingot": 25,
+      "Gun Parts": 26,
+      "Heavy Caliber Compressor": 6,
+      "Mechanical Parts (1)": 22,
+      "Silicone Block": 30,
+      "Spice-infused Duraluminum Dust": 9,
+      "Time": 15.0,
+      "Water": 340
+    }
+  },
+  "Adept Drillshot FK7": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Duraluminum Ingot": 30,
+      "Gun Parts": 29,
+      "Heavy Caliber Compressor": 5,
+      "Mechanical Parts (1)": 11,
+      "Silicone Block": 25,
+      "Time": 15.0,
+      "Water": 340
+    }
+  },
+  "Adept GRDA 44": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Duraluminum Ingot": 30,
+      "Gun Parts": 29,
+      "Light Caliber Compressor": 5,
+      "Mechanical Parts (1)": 11,
+      "Silicone Block": 26,
+      "Time": 15.0,
+      "Water": 340
+    }
+  },
+  "Adept JABAL Spitdart": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Duraluminum Ingot": 30,
+      "Gun Parts": 29,
+      "Heavy Caliber Compressor": 5,
+      "Mechanical Parts (1)": 11,
+      "Silicone Block": 26,
+      "Time": 15.0,
+      "Water": 340
+    }
+  },
+  "Adept Karpov 38": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Duraluminum Ingot": 30,
+      "Gun Parts": 29,
+      "Light Caliber Compressor": 5,
+      "Mechanical Parts (1)": 11,
+      "Silicone Block": 26,
+      "Time": 15.0,
+      "Water": 340
+    }
+  },
+  "Adept Kindjal": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Blade Parts": 19,
+      "Diamondine Dust": 4,
+      "Duraluminum Ingot": 10,
+      "Plant Fiber": 3,
+      "Plasteel Microflora Fiber": 14,
+      "Time": 15.0,
+      "Water": 280
+    }
+  },
+  "Adept Maula Pistol": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Duraluminum Ingot": 18,
+      "Gun Parts": 23,
+      "Light Caliber Compressor": 5,
+      "Mechanical Parts (1)": 18,
+      "Silicone Block": 26,
+      "Time": 15.0,
+      "Water": 340
+    }
+  },
+  "Adept Rafiq Snubnose": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Duraluminum Ingot": 20,
+      "Gun Parts": 23,
+      "Heavy Caliber Compressor": 5,
+      "Mechanical Parts (1)": 19,
+      "Silicone Block": 26,
+      "Time": 15.0,
+      "Water": 340
+    }
+  },
+  "Adept Rapier": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Blade Parts": 19,
+      "Diamondine Dust": 4,
+      "Duraluminum Ingot": 10,
+      "Plant Fiber": 3,
+      "Plasteel Microflora Fiber": 14,
+      "Time": 15.0,
+      "Water": 280
+    }
+  },
+  "Adept Sword": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Blade Parts": 19,
+      "Carbide Scraps": 4,
+      "Duraluminum Ingot": 15,
+      "Plant Fiber": 3,
+      "Plasteel Microflora Fiber": 12,
       "Time": 15.0,
       "Water": 280
     }
@@ -196,6 +382,49 @@ const ITEM_DATA = {
       "Water": 450
     }
   },
+  "Albatross Wing Module Mk4": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 9,
+      "Aluminum Ingot": 16,
+      "Cobalt Paste": 8,
+      "Industrial Pump": 3,
+      "Spice-infused Aluminum Dust": 6,
+      "Time": 20.0,
+      "Water": 125
+    }
+  },
+  "Albatross Wing Module Mk5": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 13,
+      "Cobalt Paste": 10,
+      "Duraluminum Ingot": 20,
+      "Industrial Pump": 5,
+      "Spice-infused Duraluminum Dust": 7,
+      "Time": 20.0,
+      "Water": 250
+    }
+  },
+  "Albatross Wing Module Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 16,
+      "Cobalt Paste": 20,
+      "Industrial Pump": 6,
+      "Plastanium Ingot": 25,
+      "Spice Melange": 47,
+      "Spice-infused Plastanium Dust": 8,
+      "Time": 20.0,
+      "Water": 400
+    }
+  },
   "Aluminum Ingot": {
     "fabricators": [
       "Medium Ore Refinery"
@@ -204,6 +433,22 @@ const ITEM_DATA = {
       "Aluminum Ore": 7,
       "Time": 30.0,
       "Water": 200
+    }
+  },
+  "Ambition": {
+    "fabricators": [
+      "Advanced Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Fluted Heavy Caliber Compressor": 6,
+      "Mechanical Parts (1)": 16,
+      "Plastanium Ingot": 45,
+      "Plasteel Composite Gun Parts": 16,
+      "Silicone Block": 31,
+      "Spice Melange": 62,
+      "Spice-infused Plastanium Dust": 10,
+      "Time": 15.0,
+      "Water": 530
     }
   },
   "Aren's Boots": {
@@ -278,7 +523,7 @@ const ITEM_DATA = {
     ],
     "ingredients": {
       "Copper Ingot": 8,
-      "Mechanical Parts": 3,
+      "Mechanical Parts (1)": 3,
       "Spice-infused Copper Dust": 3,
       "Time": 15.0
     }
@@ -319,6 +564,32 @@ const ITEM_DATA = {
       "Silicone Block": 6,
       "Spice-infused Steel Dust": 6,
       "Steel Ingot": 9,
+      "Time": 15.0,
+      "Water": 70
+    }
+  },
+  "Artisan GRDA 44": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Gun Parts": 14,
+      "Mechanical Parts (1)": 6,
+      "Silicone Block": 5,
+      "Steel Ingot": 12,
+      "Time": 15.0,
+      "Water": 70
+    }
+  },
+  "Artisan JABAL Spitdart": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Gun Parts": 14,
+      "Mechanical Parts (1)": 6,
+      "Silicone Block": 5,
+      "Steel Ingot": 12,
       "Time": 15.0,
       "Water": 70
     }
@@ -388,6 +659,49 @@ const ITEM_DATA = {
       "Water": 60
     }
   },
+  "Assassin's Rifle": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Gun Parts": 16,
+      "Mechanical Parts (1)": 7,
+      "Silicone Block": 6,
+      "Spice-infused Steel Dust": 6,
+      "Steel Ingot": 14,
+      "Time": 15.0,
+      "Water": 70
+    }
+  },
+  "Assault Ornithopter Cabin Mk5": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 20,
+      "Armor Plating": 34,
+      "Cobalt Paste": 25,
+      "Diamondine Dust": 10,
+      "Duraluminum Ingot": 70,
+      "Time": 20.0,
+      "Water": 680
+    }
+  },
+  "Assault Ornithopter Cabin Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 30,
+      "Cobalt Paste": 45,
+      "Diamondine Dust": 15,
+      "Plastanium Ingot": 85,
+      "Plasteel Composite Armor Plating": 30,
+      "Spice Melange": 55,
+      "Time": 20.0,
+      "Water": 1050
+    }
+  },
   "Assault Ornithopter Chassis Mk5": {
     "fabricators": [
       "Vehicle Fabricator"
@@ -410,6 +724,35 @@ const ITEM_DATA = {
       "Carbide Scraps": 15,
       "Cobalt Paste": 45,
       "Plastanium Ingot": 70,
+      "Spice Melange": 55,
+      "Time": 20.0,
+      "Water": 1050
+    }
+  },
+  "Assault Ornithopter Cockpit Mk5": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 20,
+      "Armor Plating": 34,
+      "Cobalt Paste": 25,
+      "Diamondine Dust": 10,
+      "Duraluminum Ingot": 70,
+      "Time": 20.0,
+      "Water": 680
+    }
+  },
+  "Assault Ornithopter Cockpit Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 30,
+      "Cobalt Paste": 45,
+      "Diamondine Dust": 15,
+      "Plastanium Ingot": 85,
+      "Plasteel Composite Armor Plating": 30,
       "Spice Melange": 55,
       "Time": 20.0,
       "Water": 1050
@@ -457,6 +800,34 @@ const ITEM_DATA = {
       "Water": 675
     }
   },
+  "Assault Ornithopter Generator Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 45,
+      "Overclocked Power Regulator": 9,
+      "Particle Capacitor": 36,
+      "Plastanium Ingot": 60,
+      "Spice Melange": 54,
+      "Time": 20.0,
+      "Water": 1050
+    }
+  },
+  "Assault Ornithopter Rocket Launcher Mk5": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 40,
+      "Cobalt Paste": 36,
+      "Duraluminum Ingot": 72,
+      "Range Finder": 15,
+      "Spice Melange": 10,
+      "Time": 20.0,
+      "Water": 1010
+    }
+  },
   "Assault Ornithopter Rocket Launcher Mk6": {
     "fabricators": [
       "Advanced Vehicle Fabricator"
@@ -469,6 +840,30 @@ const ITEM_DATA = {
       "Spice Melange": 81,
       "Time": 20.0,
       "Water": 1580
+    }
+  },
+  "Assault Ornithopter Storage Mk5": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 40,
+      "Cobalt Paste": 36,
+      "Duraluminum Ingot": 72,
+      "Time": 20.0,
+      "Water": 1013
+    }
+  },
+  "Assault Ornithopter Tail Mk5": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 20,
+      "Cobalt Paste": 25,
+      "Duraluminum Ingot": 72,
+      "Time": 20.0,
+      "Water": 675
     }
   },
   "Assault Ornithopter Tail Mk6": {
@@ -512,6 +907,33 @@ const ITEM_DATA = {
       "Water": 1580
     }
   },
+  "Assault Ornithopter Wing Mk5": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 5,
+      "Cobalt Paste": 4,
+      "Duraluminum Ingot": 8,
+      "Industrial Pump": 2,
+      "Time": 20.0,
+      "Water": 135
+    }
+  },
+  "Assault Ornithopter Wing Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 6,
+      "Cobalt Paste": 8,
+      "Industrial Pump": 3,
+      "Plastanium Ingot": 10,
+      "Spice Melange": 9,
+      "Time": 20.0,
+      "Water": 250
+    }
+  },
   "Atmospheric Filtered Fabric": {
     "fabricators": [
       "Advanced Survival Fabricator"
@@ -534,6 +956,22 @@ const ITEM_DATA = {
       "Silicone Block": 2,
       "Time": 3.0,
       "Water": 50
+    }
+  },
+  "Bashar's Command": {
+    "fabricators": [
+      "Advanced Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Fluted Heavy Caliber Compressor": 9,
+      "Mechanical Parts (1)": 10,
+      "Plastanium Ingot": 50,
+      "Plasteel Composite Gun Parts": 17,
+      "Silicone Block": 31,
+      "Spice Melange": 62,
+      "Spice-infused Plastanium Dust": 10,
+      "Time": 15.0,
+      "Water": 530
     }
   },
   "Batigh Stillsuit Boots": {
@@ -592,6 +1030,19 @@ const ITEM_DATA = {
       "Water": 340
     }
   },
+  "Bigger Buggy Boot Mk3": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 14,
+      "Cobalt Paste": 10,
+      "Spice-infused Steel Dust": 17,
+      "Steel Ingot": 31,
+      "Time": 20.0,
+      "Water": 200
+    }
+  },
   "Bigger Buggy Boot Mk4": {
     "fabricators": [
       "Vehicle Fabricator"
@@ -603,6 +1054,19 @@ const ITEM_DATA = {
       "Spice-infused Aluminum Dust": 22,
       "Time": 20.0,
       "Water": 510
+    }
+  },
+  "Bigger Buggy Boot Mk5": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 25,
+      "Cobalt Paste": 25,
+      "Duraluminum Ingot": 85,
+      "Spice-infused Duraluminum Dust": 19,
+      "Time": 20.0,
+      "Water": 1010
     }
   },
   "Bigger Buggy Boot Mk6": {
@@ -657,6 +1121,76 @@ const ITEM_DATA = {
       "Time": 15.0
     }
   },
+  "Blood Extractor Mk4": {
+    "fabricators": [
+      "Survival Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 25,
+      "Cobalt Paste": 12,
+      "EMF Generator": 10,
+      "Industrial Pump": 5,
+      "Time": 15.0,
+      "Water": 225
+    }
+  },
+  "Blood Extractor Mk6": {
+    "fabricators": [
+      "Advanced Survival Fabricator"
+    ],
+    "ingredients": {
+      "EMF Generator": 24,
+      "Fluid Efficient Industrial Pump": 9,
+      "Plastanium Ingot": 50,
+      "Silicone Block": 36,
+      "Spice Melange": 27,
+      "Time": 15.0,
+      "Water": 700
+    }
+  },
+  "Bluddshot Buggy Engine Mk3": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 20,
+      "Complex Machinery": 17,
+      "Particle Capacitor": 14,
+      "Spice-infused Steel Dust": 17,
+      "Steel Ingot": 31,
+      "Time": 20.0,
+      "Water": 200
+    }
+  },
+  "Bluddshot Buggy Engine Mk4": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 60,
+      "Cobalt Paste": 30,
+      "Complex Machinery": 26,
+      "Particle Capacitor": 18,
+      "Spice-infused Aluminum Dust": 22,
+      "Time": 20.0,
+      "Water": 510
+    }
+  },
+  "Bluddshot Buggy Engine Mk5": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 40,
+      "Complex Machinery": 36,
+      "Duraluminum Ingot": 85,
+      "Hydraulic Piston": 13,
+      "Particle Capacitor": 25,
+      "Spice-infused Duraluminum Dust": 26,
+      "Time": 20.0,
+      "Water": 1010
+    }
+  },
   "Bluddshot Buggy Engine Mk6": {
     "fabricators": [
       "Advanced Vehicle Fabricator"
@@ -685,6 +1219,19 @@ const ITEM_DATA = {
       "Spice-infused Duraluminum Dust": 8,
       "Time": 15.0,
       "Water": 280
+    }
+  },
+  "Buggy Booster Mk3": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 17,
+      "Holtzman Actuator": 25,
+      "Particle Capacitor": 30,
+      "Steel Ingot": 30,
+      "Time": 20.0,
+      "Water": 200
     }
   },
   "Buggy Booster Mk4": {
@@ -727,14 +1274,29 @@ const ITEM_DATA = {
       "Water": 1580
     }
   },
-  "Buggy Chassis MK3": {
-    "fabricators": [],
+  "Buggy Chassis Mk3": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
     "ingredients": {
       "Advanced Servoks": 21,
       "Cobalt Paste": 13,
       "Steel Ingot": 30,
-      "Time": 15.0,
+      "Time": 20.0,
       "Water": 135
+    }
+  },
+  "Buggy Chassis Mk4": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 16,
+      "Aluminum Ingot": 55,
+      "Carbide Scraps": 7,
+      "Cobalt Paste": 18,
+      "Time": 20.0,
+      "Water": 340
     }
   },
   "Buggy Chassis Mk5": {
@@ -764,6 +1326,19 @@ const ITEM_DATA = {
       "Water": 1050
     }
   },
+  "Buggy Cutteray Mk3": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 17,
+      "Holtzman Actuator": 23,
+      "Particle Capacitor": 25,
+      "Steel Ingot": 30,
+      "Time": 20.0,
+      "Water": 200
+    }
+  },
   "Buggy Cutteray Mk4": {
     "fabricators": [
       "Vehicle Fabricator"
@@ -791,25 +1366,31 @@ const ITEM_DATA = {
       "Water": 1010
     }
   },
-  "Buggy Cutterray MK3": {
-    "fabricators": [],
+  "Buggy Cutteray Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
     "ingredients": {
-      "Cobalt Paste": 17,
-      "Holtzman Actuator": 23,
-      "Particle Capacitor": 25,
-      "Steel Ingot": 30,
-      "Time": 15.0,
-      "Water": 200
+      "Cobalt Paste": 67,
+      "Particle Capacitor": 54,
+      "Plastanium Ingot": 115,
+      "Spice Melange": 81,
+      "Thermo-Responsive Ray Amplifier": 13,
+      "Thermoelectric Cooler": 15,
+      "Time": 20.0,
+      "Water": 1580
     }
   },
-  "Buggy Engine MK3": {
-    "fabricators": [],
+  "Buggy Engine Mk3": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
     "ingredients": {
       "Cobalt Paste": 13,
-      "Complex Machinery": 19,
+      "Complex Machinery": 10,
       "Particle Capacitor": 30,
       "Steel Ingot": 20,
-      "Time": 15.0,
+      "Time": 20.0,
       "Water": 135
     }
   },
@@ -826,6 +1407,35 @@ const ITEM_DATA = {
       "Water": 340
     }
   },
+  "Buggy Engine Mk5": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 25,
+      "Complex Machinery": 21,
+      "Duraluminum Ingot": 50,
+      "Hydraulic Piston": 7,
+      "Particle Capacitor": 14,
+      "Time": 20.0,
+      "Water": 675
+    }
+  },
+  "Buggy Engine Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 45,
+      "Complex Machinery": 30,
+      "Particle Capacitor": 18,
+      "Plastanium Ingot": 60,
+      "Spice Melange": 54,
+      "Time": 20.0,
+      "Tri-Forged Hydraulic Piston": 9,
+      "Water": 1050
+    }
+  },
   "Buggy Hull Mk3": {
     "fabricators": [
       "Vehicle Fabricator"
@@ -835,16 +1445,6 @@ const ITEM_DATA = {
       "Cobalt Paste": 13,
       "Steel Ingot": 30,
       "Time": 20.0,
-      "Water": 135
-    }
-  },
-  "Buggy Hull MK3": {
-    "fabricators": [],
-    "ingredients": {
-      "Advanced Servoks": 20,
-      "Cobalt Paste": 13,
-      "Steel Ingot": 30,
-      "Time": 15.0,
       "Water": 135
     }
   },
@@ -876,6 +1476,21 @@ const ITEM_DATA = {
       "Water": 680
     }
   },
+  "Buggy Hull Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 30,
+      "Cobalt Paste": 45,
+      "Diamondine Dust": 15,
+      "Plastanium Ingot": 85,
+      "Plasteel Composite Armor Plating": 30,
+      "Spice Melange": 55,
+      "Time": 20.0,
+      "Water": 1050
+    }
+  },
   "Buggy PSU Mk3": {
     "fabricators": [
       "Vehicle Fabricator"
@@ -885,16 +1500,6 @@ const ITEM_DATA = {
       "Particle Capacitor": 20,
       "Steel Ingot": 20,
       "Time": 20.0,
-      "Water": 135
-    }
-  },
-  "Buggy PSU MK3": {
-    "fabricators": [],
-    "ingredients": {
-      "Cobalt Paste": 13,
-      "Particle Capacitor": 20,
-      "Steel Ingot": 20,
-      "Time": 15.0,
       "Water": 135
     }
   },
@@ -908,6 +1513,19 @@ const ITEM_DATA = {
       "Particle Capacitor": 20,
       "Time": 20.0,
       "Water": 340
+    }
+  },
+  "Buggy PSU Mk5": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 25,
+      "Duraluminum Ingot": 50,
+      "Military Power Regulator": 7,
+      "Particle Capacitor": 30,
+      "Time": 20.0,
+      "Water": 675
     }
   },
   "Buggy PSU Mk6": {
@@ -924,15 +1542,31 @@ const ITEM_DATA = {
       "Water": 1050
     }
   },
-  "Buggy Rear MK3": {
-    "fabricators": [],
+  "Buggy Rear Mk3": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
     "ingredients": {
-      "Advanced Servoks": 20,
+      "Advanced Servoks": 21,
       "Armor Plating": 13,
       "Cobalt Paste": 13,
       "Steel Ingot": 30,
-      "Time": 15.0,
+      "Time": 20.0,
       "Water": 135
+    }
+  },
+  "Buggy Rear Mk4": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 16,
+      "Aluminum Ingot": 55,
+      "Armor Plating": 21,
+      "Cobalt Paste": 18,
+      "Diamondine Dust": 7,
+      "Time": 20.0,
+      "Water": 340
     }
   },
   "Buggy Rear Mk5": {
@@ -978,14 +1612,42 @@ const ITEM_DATA = {
       "Water": 1010
     }
   },
-  "Buggy Storage MK3": {
-    "fabricators": [],
+  "Buggy Rocket Launcher Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 54,
+      "Cobalt Paste": 67,
+      "Plastanium Ingot": 85,
+      "Precision Range Finder": 13,
+      "Spice Melange": 81,
+      "Time": 20.0,
+      "Water": 1580
+    }
+  },
+  "Buggy Storage Mk3": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
     "ingredients": {
       "Advanced Servoks": 12,
       "Cobalt Paste": 9,
       "Steel Ingot": 30,
-      "Time": 15.0,
+      "Time": 20.0,
       "Water": 200
+    }
+  },
+  "Buggy Storage Mk4": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 16,
+      "Aluminum Ingot": 55,
+      "Cobalt Paste": 14,
+      "Time": 20.0,
+      "Water": 510
     }
   },
   "Buggy Storage Mk5": {
@@ -1000,6 +1662,19 @@ const ITEM_DATA = {
       "Water": 845
     }
   },
+  "Buggy Storage Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 27,
+      "Cobalt Paste": 34,
+      "Plastanium Ingot": 86,
+      "Spice Melange": 81,
+      "Time": 20.0,
+      "Water": 1580
+    }
+  },
   "Buggy Tread Mk3": {
     "fabricators": [
       "Vehicle Fabricator"
@@ -1012,14 +1687,16 @@ const ITEM_DATA = {
       "Water": 45
     }
   },
-  "Buggy Tread MK3": {
-    "fabricators": [],
+  "Buggy Tread Mk4": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
     "ingredients": {
-      "Cobalt Paste": 4,
-      "Particle Capacitor": 7,
-      "Steel Ingot": 5,
-      "Time": 15.0,
-      "Water": 45
+      "Advanced Servoks": 6,
+      "Aluminum Ingot": 9,
+      "Cobalt Paste": 5,
+      "Time": 20.0,
+      "Water": 340
     }
   },
   "Buggy Tread Mk5": {
@@ -1034,6 +1711,32 @@ const ITEM_DATA = {
       "Water": 170
     }
   },
+  "Buggy Tread Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 9,
+      "Cobalt Paste": 12,
+      "Plastanium Ingot": 15,
+      "Spice Melange": 14,
+      "Time": 20.0,
+      "Water": 250
+    }
+  },
+  "Buggy Utility Rear Mk3": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 20,
+      "Armor Plating": 13,
+      "Cobalt Paste": 13,
+      "Steel Ingot": 30,
+      "Time": 20.0,
+      "Water": 135
+    }
+  },
   "Buggy Utility Rear Mk4": {
     "fabricators": [
       "Vehicle Fabricator"
@@ -1046,6 +1749,35 @@ const ITEM_DATA = {
       "Diamondine Dust": 7,
       "Time": 20.0,
       "Water": 340
+    }
+  },
+  "Buggy Utility Rear Mk5": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 20,
+      "Armor Plating": 34,
+      "Cobalt Paste": 25,
+      "Diamondine Dust": 10,
+      "Duraluminum Ingot": 70,
+      "Time": 20.0,
+      "Water": 680
+    }
+  },
+  "Buggy Utility Rear Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 30,
+      "Cobalt Paste": 45,
+      "Diamondine Dust": 15,
+      "Plastanium Ingot": 85,
+      "Plasteel Composite Armor Plating": 30,
+      "Spice Melange": 55,
+      "Time": 20.0,
+      "Water": 1050
     }
   },
   "Bulwark Boots": {
@@ -1149,6 +1881,19 @@ const ITEM_DATA = {
       "Water": 90
     }
   },
+  "Buoyant Reaper Mk4": {
+    "fabricators": [
+      "Survival Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 20,
+      "EMF Generator": 16,
+      "Silicone Block": 20,
+      "Spice-infused Aluminum Dust": 10,
+      "Time": 15.0,
+      "Water": 230
+    }
+  },
   "Buoyant Reaper Mk5": {
     "fabricators": [
       "Survival Fabricator"
@@ -1160,6 +1905,21 @@ const ITEM_DATA = {
       "Spice-infused Duraluminum Dust": 12,
       "Time": 15.0,
       "Water": 450
+    }
+  },
+  "Buoyant Reaper Mk6": {
+    "fabricators": [
+      "Advanced Survival Fabricator"
+    ],
+    "ingredients": {
+      "EMF Generator": 28,
+      "Fluid Efficient Industrial Pump": 7,
+      "Plastanium Ingot": 35,
+      "Silicone Block": 41,
+      "Spice Melange": 83,
+      "Spice-infused Plastanium Dust": 14,
+      "Time": 15.0,
+      "Water": 700
     }
   },
   "Caladan Casual Trousers": {
@@ -1180,6 +1940,20 @@ const ITEM_DATA = {
       "Water": 25
     }
   },
+  "Callie's Breaker": {
+    "fabricators": [
+      "Survival Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 9,
+      "EMF Generator": 13,
+      "Ray Amplifier": 6,
+      "Spice-infused Steel Dust": 8,
+      "Steel Ingot": 17,
+      "Time": 15.0,
+      "Water": 90
+    }
+  },
   "Carbide blade parts": {
     "fabricators": [
       "Advanced Survival Fabricator"
@@ -1190,6 +1964,20 @@ const ITEM_DATA = {
       "Plasteel Plate": 2,
       "Time": 3.0,
       "Water": 50
+    }
+  },
+  "Carrier Ornithopter Chassis Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 36,
+      "Carbide Scraps": 15,
+      "Cobalt Paste": 45,
+      "Plastanium Ingot": 85,
+      "Spice Melange": 54,
+      "Time": 20.0,
+      "Water": 1050
     }
   },
   "Carrier Ornithopter Engine Mk6": {
@@ -1249,6 +2037,64 @@ const ITEM_DATA = {
       "Spice Melange": 54,
       "Time": 20.0,
       "Water": 1050
+    }
+  },
+  "Carrier Ornithopter Tail Hull Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 36,
+      "Cobalt Paste": 45,
+      "Diamondine Dust": 15,
+      "Plastanium Ingot": 100,
+      "Plasteel Composite Armor Plating": 30,
+      "Spice Melange": 55,
+      "Time": 20.0,
+      "Water": 1050
+    }
+  },
+  "Carrier Ornithopter Thruster Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Improved Holtzman Actuator": 17,
+      "Particle Capacitor": 68,
+      "Plastanium Ingot": 95,
+      "Spice Melange": 81,
+      "Time": 20.0,
+      "Water": 1580
+    }
+  },
+  "Carrier Ornithopter Wing Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 5,
+      "Cobalt Paste": 6,
+      "Industrial Pump": 2,
+      "Plastanium Ingot": 8,
+      "Spice Melange": 8,
+      "Time": 20.0,
+      "Water": 250
+    }
+  },
+  "Cauterizer": {
+    "fabricators": [
+      "Advanced Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Diamodine blade parts": 5,
+      "Plant Fiber": 3,
+      "Plastanium Ingot": 20,
+      "Plasteel Composite Blade Parts": 6,
+      "Plasteel Microflora Fiber": 21,
+      "Spice Melange": 53,
+      "Spice-infused Plastanium Dust": 9,
+      "Time": 15.0,
+      "Water": 440
     }
   },
   "Ceremonial Damasteel Sword": {
@@ -1547,6 +2393,19 @@ const ITEM_DATA = {
       "Water": 350
     }
   },
+  "Clapper Mk4": {
+    "fabricators": [
+      "Survival Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 10,
+      "EMF Generator": 7,
+      "Silicone Block": 8,
+      "Spice-infused Aluminum Dust": 5,
+      "Time": 15.0,
+      "Water": 85
+    }
+  },
   "Cobalt Paste": {
     "fabricators": [
       "Medium Chemical Refinery"
@@ -1555,6 +2414,19 @@ const ITEM_DATA = {
       "Erythrite Crystal": 2,
       "Time": 10.0,
       "Water": 75
+    }
+  },
+  "Collapsible Dew Reaper Mk4": {
+    "fabricators": [
+      "Survival Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 14,
+      "EMF Generator": 16,
+      "Silicone Block": 20,
+      "Spice-infused Aluminum Dust": 10,
+      "Time": 15.0,
+      "Water": 225
     }
   },
   "Collapsible Dew Reaper Mk5": {
@@ -1568,6 +2440,79 @@ const ITEM_DATA = {
       "Spice-infused Duraluminum Dust": 12,
       "Time": 15.0,
       "Water": 450
+    }
+  },
+  "Collapsible Dew Reaper Mk6": {
+    "fabricators": [
+      "Advanced Survival Fabricator"
+    ],
+    "ingredients": {
+      "EMF Generator": 28,
+      "Fluid Efficient Industrial Pump": 7,
+      "Plastanium Ingot": 22,
+      "Silicone Block": 41,
+      "Spice Melange": 83,
+      "Spice-infused Plastanium Dust": 14,
+      "Time": 15.0,
+      "Water": 700
+    }
+  },
+  "Compact Compactor Mk3": {
+    "fabricators": [
+      "Survival Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 9,
+      "EMF Generator": 13,
+      "Spice-infused Steel Dust": 8,
+      "Steel Ingot": 14,
+      "Time": 15.0,
+      "Water": 90
+    }
+  },
+  "Compact Compactor Mk4": {
+    "fabricators": [
+      "Survival Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 30,
+      "Cobalt Paste": 14,
+      "EMF Generator": 16,
+      "Silicone Block": 20,
+      "Spice-infused Aluminum Dust": 10,
+      "Time": 15.0,
+      "Water": 225
+    }
+  },
+  "Compact Compactor Mk5": {
+    "fabricators": [
+      "Survival Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 18,
+      "Duraluminum Ingot": 37,
+      "EMF Generator": 20,
+      "Silicone Block": 40,
+      "Spice-infused Duraluminum Dust": 12,
+      "Thermoelectric Cooler": 6,
+      "Time": 15.0,
+      "Water": 450
+    }
+  },
+  "Compact Compactor Mk6": {
+    "fabricators": [
+      "Advanced Survival Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 30,
+      "EMF Generator": 24,
+      "Improved Holtzman Actuator": 8,
+      "Plastanium Ingot": 45,
+      "Spice Melange": 83,
+      "Spice-infused Plastanium Dust": 14,
+      "Thermoelectric Cooler": 7,
+      "Time": 15.0,
+      "Water": 700
     }
   },
   "Compression-Stim Leggings": {
@@ -1594,13 +2539,39 @@ const ITEM_DATA = {
       "Time": 4.0
     }
   },
-  "Copper Ingot": {
+  "Cope": {
     "fabricators": [
-      "Small Ore Refinery"
+      "Weapons Fabricator"
     ],
     "ingredients": {
-      "Copper Ore": 4,
-      "Time": 5.0
+      "Duraluminum Ingot": 25,
+      "Gun Parts": 26,
+      "Heavy Caliber Compressor": 6,
+      "Mechanical Parts (1)": 22,
+      "Silicone Block": 30,
+      "Spice-infused Duraluminum Dust": 9,
+      "Time": 15.0,
+      "Water": 340
+    }
+  },
+  "Copper Ingot": {
+    "fabricators": [
+      "Large Ore Refinery"
+    ],
+    "ingredients": {
+      "Copper Ore": 2,
+      "Time": 3.0
+    }
+  },
+  "Cutteray Mk1": {
+    "fabricators": [
+      "Fabricator",
+      "Survival Fabricator"
+    ],
+    "ingredients": {
+      "Copper Ingot": 6,
+      "EMF Generator": 4,
+      "Time": 15.0
     }
   },
   "Cutteray Mk2": {
@@ -1612,6 +2583,56 @@ const ITEM_DATA = {
       "EMF Generator": 7,
       "Iron Ingot": 10,
       "Time": 15.0
+    }
+  },
+  "Cutteray Mk3": {
+    "fabricators": [
+      "Survival Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 10,
+      "EMF Generator": 10,
+      "Ray Amplifier": 5,
+      "Steel Ingot": 15,
+      "Time": 15.0,
+      "Water": 90
+    }
+  },
+  "Cutteray Mk5": {
+    "fabricators": [
+      "Survival Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 16,
+      "Duraluminum Ingot": 40,
+      "EMF Generator": 18,
+      "Ray Amplifier": 10,
+      "Thermoelectric Cooler": 7,
+      "Time": 15.0,
+      "Water": 450
+    }
+  },
+  "Cutteray Mk6": {
+    "fabricators": [
+      "Survival Fabricator"
+    ],
+    "ingredients": {
+      "Time": 3.0,
+      "Water": 25
+    }
+  },
+  "Dampened Sandcrawler Treads": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 16,
+      "Cobalt Paste": 20,
+      "Plastanium Ingot": 25,
+      "Spice Melange": 93,
+      "Spice-infused Plastanium Dust": 8,
+      "Time": 20.0,
+      "Water": 1580
     }
   },
   "Decaliterjon": {
@@ -1652,6 +2673,43 @@ const ITEM_DATA = {
       "Silicone Block": 41,
       "Spice Melange": 83,
       "Spice-infused Plastanium Dust": 14,
+      "Time": 15.0,
+      "Water": 700
+    }
+  },
+  "Dew Reaper Mk2": {
+    "fabricators": [
+      "Survival Fabricator"
+    ],
+    "ingredients": {
+      "EMF Generator": 7,
+      "Iron Ingot": 6,
+      "Silicone Block": 4,
+      "Time": 15.0
+    }
+  },
+  "Dew Reaper Mk4": {
+    "fabricators": [
+      "Survival Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 12,
+      "EMF Generator": 14,
+      "Silicone Block": 17,
+      "Time": 15.0,
+      "Water": 225
+    }
+  },
+  "Dew Reaper Mk6": {
+    "fabricators": [
+      "Advanced Survival Fabricator"
+    ],
+    "ingredients": {
+      "EMF Generator": 24,
+      "Fluid Efficient Industrial Pump": 6,
+      "Plastanium Ingot": 40,
+      "Silicone Block": 36,
+      "Spice Melange": 27,
       "Time": 15.0,
       "Water": 700
     }
@@ -1774,6 +2832,19 @@ const ITEM_DATA = {
       "Water": 140
     }
   },
+  "Duneman Scout Gloves": {
+    "fabricators": [
+      "Wearables Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 12,
+      "Plasteel Microflora Fiber": 7,
+      "Sandtrout Leathers": 3,
+      "Silicone Block": 9,
+      "Time": 15.0,
+      "Water": 110
+    }
+  },
   "Duneman Scout Helmet": {
     "fabricators": [
       "Wearables Fabricator"
@@ -1813,6 +2884,33 @@ const ITEM_DATA = {
       "Water": 200
     }
   },
+  "Dunewatcher": {
+    "fabricators": [
+      "Advanced Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Fluted Heavy Caliber Compressor": 6,
+      "Mechanical Parts (1)": 16,
+      "Plastanium Ingot": 45,
+      "Plasteel Composite Gun Parts": 16,
+      "Silicone Block": 31,
+      "Spice Melange": 62,
+      "Spice-infused Plastanium Dust": 10,
+      "Time": 15.0,
+      "Water": 530
+    }
+  },
+  "Duraluminum Ingot": {
+    "fabricators": [
+      "Large Ore Refinery"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 1,
+      "Jasmium Crystal": 3,
+      "Time": 4.0,
+      "Water": 650
+    }
+  },
   "Duraluminum Welding Wire": {
     "fabricators": [
       "Survival Fabricator"
@@ -1820,6 +2918,21 @@ const ITEM_DATA = {
     "ingredients": {
       "Duraluminum Ingot": 5,
       "Time": 3.0
+    }
+  },
+  "Eviscerator": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 25,
+      "Gun Parts": 25,
+      "Light Caliber Compressor": 5,
+      "Mechanical Parts (1)": 10,
+      "Silicone Block": 15,
+      "Spice-infused Aluminum Dust": 8,
+      "Time": 15.0,
+      "Water": 170
     }
   },
   "Executor's Boots": {
@@ -1897,6 +3010,52 @@ const ITEM_DATA = {
       "Water": 610
     }
   },
+  "Experimental Vulcan GAU-94": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 30,
+      "Gun Parts": 30,
+      "Heavy Caliber Compressor": 7,
+      "Mechanical Parts (1)": 7,
+      "Silicone Block": 15,
+      "Spice-infused Aluminum Dust": 8,
+      "Time": 15.0,
+      "Water": 170
+    }
+  },
+  "Extravagant Message": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Duraluminum Ingot": 40,
+      "Gun Parts": 40,
+      "Heavy Caliber Compressor": 9,
+      "Mechanical Parts (1)": 8,
+      "Silicone Block": 30,
+      "Spice-infused Duraluminum Dust": 9,
+      "Time": 15.0,
+      "Water": 340
+    }
+  },
+  "Feyd's Drinker": {
+    "fabricators": [
+      "Advanced Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Diamodine blade parts": 5,
+      "Plant Fiber": 3,
+      "Plastanium Ingot": 21,
+      "Plasteel Composite Blade Parts": 6,
+      "Plasteel Microflora Fiber": 21,
+      "Spice Melange": 53,
+      "Spice-infused Plastanium Dust": 9,
+      "Time": 15.0,
+      "Water": 440
+    }
+  },
   "Fila's Regret": {
     "fabricators": [
       "Fabricator",
@@ -1905,7 +3064,7 @@ const ITEM_DATA = {
     "ingredients": {
       "Gun Parts": 10,
       "Iron Ingot": 10,
-      "Mechanical Parts": 5,
+      "Mechanical Parts (1)": 5,
       "Silicone Block": 3,
       "Spice-infused Iron Dust": 5,
       "Time": 15.0
@@ -1922,6 +3081,79 @@ const ITEM_DATA = {
       "Steel Ingot": 14,
       "Time": 15.0,
       "Water": 90
+    }
+  },
+  "Filter Extractor Mk4": {
+    "fabricators": [
+      "Survival Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 30,
+      "Cobalt Paste": 14,
+      "EMF Generator": 12,
+      "Industrial Pump": 6,
+      "Spice-infused Aluminum Dust": 10,
+      "Time": 15.0,
+      "Water": 225
+    }
+  },
+  "Filter Extractor Mk5": {
+    "fabricators": [
+      "Survival Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 18,
+      "Duraluminum Ingot": 37,
+      "EMF Generator": 14,
+      "Industrial Pump": 8,
+      "Spice-infused Duraluminum Dust": 12,
+      "Time": 15.0,
+      "Water": 450
+    }
+  },
+  "Filter Extractor Mk6": {
+    "fabricators": [
+      "Advanced Survival Fabricator"
+    ],
+    "ingredients": {
+      "EMF Generator": 28,
+      "Fluid Efficient Industrial Pump": 10,
+      "Plastanium Ingot": 55,
+      "Silicone Block": 41,
+      "Spice Melange": 83,
+      "Spice-infused Plastanium Dust": 14,
+      "Time": 15.0,
+      "Water": 700
+    }
+  },
+  "Firestorm": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 25,
+      "Gun Parts": 20,
+      "Light Caliber Compressor": 5,
+      "Mechanical Parts (1)": 10,
+      "Silicone Block": 15,
+      "Spice-infused Aluminum Dust": 8,
+      "Time": 15.0,
+      "Water": 170
+    }
+  },
+  "Fivefinger's Tripleshot Rifle": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Duraluminum Ingot": 35,
+      "Gun Parts": 33,
+      "Heavy Caliber Compressor": 6,
+      "Mechanical Parts (1)": 13,
+      "Silicone Block": 30,
+      "Spice-infused Duraluminum Dust": 9,
+      "Time": 15.0,
+      "Water": 340
     }
   },
   "Fluid Efficient Industrial Pump": {
@@ -1958,6 +3190,20 @@ const ITEM_DATA = {
       "Plasteel Plate": 2,
       "Time": 3.0,
       "Water": 50
+    }
+  },
+  "Focused Buggy Cutteray Mk3": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 20,
+      "Particle Capacitor": 26,
+      "Ray Amplifier": 13,
+      "Spice-infused Steel Dust": 17,
+      "Steel Ingot": 41,
+      "Time": 20.0,
+      "Water": 200
     }
   },
   "Focused Buggy Cutteray Mk4": {
@@ -2048,6 +3294,22 @@ const ITEM_DATA = {
       "Water": 255
     }
   },
+  "Glasser": {
+    "fabricators": [
+      "Advanced Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 33,
+      "Fluid Efficient Industrial Pump": 8,
+      "Mechanical Parts (1)": 16,
+      "Plastanium Ingot": 85,
+      "Plasteel Composite Gun Parts": 21,
+      "Spice Melange": 70,
+      "Spice-infused Plastanium Dust": 14,
+      "Time": 15.0,
+      "Water": 530
+    }
+  },
   "Gloves of the Sisterhood": {
     "fabricators": [
       "Wearables Fabricator"
@@ -2084,6 +3346,20 @@ const ITEM_DATA = {
       "Steel Ingot": 16,
       "Time": 15.0,
       "Water": 100
+    }
+  },
+  "Glutton's Drinker": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Blade Parts": 10,
+      "Plant Fiber": 3,
+      "Plasteel Microflora Fiber": 10,
+      "Spice-infused Steel Dust": 5,
+      "Steel Ingot": 5,
+      "Time": 15.0,
+      "Water": 60
     }
   },
   "Hajra Literjon Mk1": {
@@ -2178,6 +3454,20 @@ const ITEM_DATA = {
       "Spice-infused Plastanium Dust": 9,
       "Time": 15.0,
       "Water": 440
+    }
+  },
+  "Handheld Life Scanner Mk3": {
+    "fabricators": [
+      "Survival Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 8,
+      "EMF Generator": 12,
+      "Silicone Block": 6,
+      "Spice-infused Steel Dust": 7,
+      "Steel Ingot": 13,
+      "Time": 15.0,
+      "Water": 80
     }
   },
   "Handheld Resource Scanner": {
@@ -2342,6 +3632,35 @@ const ITEM_DATA = {
       "Water": 350
     }
   },
+  "House Burst Drillshot": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 25,
+      "Gun Parts": 25,
+      "Heavy Caliber Compressor": 5,
+      "Mechanical Parts (1)": 10,
+      "Silicone Block": 15,
+      "Spice-infused Aluminum Dust": 8,
+      "Time": 15.0,
+      "Water": 170
+    }
+  },
+  "House Dirk": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 8,
+      "Blade Parts": 15,
+      "Diamondine Dust": 3,
+      "Plant Fiber": 3,
+      "Plasteel Microflora Fiber": 25,
+      "Time": 15.0,
+      "Water": 140
+    }
+  },
   "House Disruptor M11": {
     "fabricators": [
       "Weapons Fabricator"
@@ -2354,6 +3673,175 @@ const ITEM_DATA = {
       "Silicone Block": 17,
       "Time": 15.0,
       "Water": 170
+    }
+  },
+  "House Disruptor Pistol": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 15,
+      "Gun Parts": 17,
+      "Heavy Caliber Compressor": 4,
+      "Mechanical Parts (1)": 15,
+      "Silicone Block": 13,
+      "Spice-infused Aluminum Dust": 7,
+      "Time": 15.0,
+      "Water": 170
+    }
+  },
+  "House Drillshot FK7": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 25,
+      "Gun Parts": 22,
+      "Heavy Caliber Compressor": 4,
+      "Mechanical Parts (1)": 9,
+      "Silicone Block": 13,
+      "Time": 15.0,
+      "Water": 170
+    }
+  },
+  "House GRDA 44": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 25,
+      "Gun Parts": 22,
+      "Light Caliber Compressor": 4,
+      "Mechanical Parts (1)": 9,
+      "Silicone Block": 13,
+      "Time": 15.0,
+      "Water": 170
+    }
+  },
+  "House JABAL Spitdart": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 24,
+      "Gun Parts": 22,
+      "Heavy Caliber Compressor": 4,
+      "Mechanical Parts (1)": 9,
+      "Silicone Block": 13,
+      "Time": 15.0,
+      "Water": 170
+    }
+  },
+  "House Karpov 38": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 20,
+      "Gun Parts": 22,
+      "Light Caliber Compressor": 4,
+      "Mechanical Parts (1)": 9,
+      "Silicone Block": 13,
+      "Time": 15.0,
+      "Water": 170
+    }
+  },
+  "House Kindjal": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 8,
+      "Blade Parts": 15,
+      "Diamondine Dust": 3,
+      "Plant Fiber": 3,
+      "Plasteel Microflora Fiber": 25,
+      "Time": 15.0,
+      "Water": 140
+    }
+  },
+  "House Maula Pistol": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 15,
+      "Gun Parts": 17,
+      "Light Caliber Compressor": 4,
+      "Mechanical Parts (1)": 14,
+      "Silicone Block": 13,
+      "Time": 15.0,
+      "Water": 170
+    }
+  },
+  "House Rafiq Snubnose": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 15,
+      "Gun Parts": 17,
+      "Heavy Caliber Compressor": 4,
+      "Mechanical Parts (1)": 23,
+      "Silicone Block": 13,
+      "Time": 15.0,
+      "Water": 170
+    }
+  },
+  "House Rapier": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 12,
+      "Blade Parts": 15,
+      "Carbide Scraps": 3,
+      "Plant Fiber": 3,
+      "Plasteel Microflora Fiber": 25,
+      "Time": 15.0,
+      "Water": 140
+    }
+  },
+  "House Sword": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 12,
+      "Blade Parts": 15,
+      "Carbide Scraps": 3,
+      "Plant Fiber": 3,
+      "Plasteel Microflora Fiber": 25,
+      "Time": 15.0,
+      "Water": 140
+    }
+  },
+  "House Vulcan GAU-92": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 30,
+      "Gun Parts": 26,
+      "Heavy Caliber Compressor": 6,
+      "Mechanical Parts (1)": 6,
+      "Silicone Block": 13,
+      "Time": 15.0,
+      "Water": 170
+    }
+  },
+  "Hummingbird Wing Module Mk5": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 10,
+      "Cobalt Paste": 9,
+      "Duraluminum Ingot": 17,
+      "Industrial Pump": 3,
+      "Spice-infused Duraluminum Dust": 6,
+      "Time": 20.0,
+      "Water": 250
     }
   },
   "Hummingbird Wing Module Mk6": {
@@ -2642,6 +4130,17 @@ const ITEM_DATA = {
       "Water": 700
     }
   },
+  "Incendiary Gel": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Fuel Cell": 15,
+      "Salvaged Metal": 25,
+      "Time": 3.0,
+      "Water": 75
+    }
+  },
   "Indara's Lullaby": {
     "fabricators": [
       "Advanced Weapons Fabricator"
@@ -2656,6 +4155,45 @@ const ITEM_DATA = {
       "Spice-infused Plastanium Dust": 10,
       "Time": 15.0,
       "Water": 530
+    }
+  },
+  "Industrial Cutteray Mk4": {
+    "fabricators": [
+      "Survival Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 25,
+      "Cobalt Paste": 12,
+      "EMF Generator": 14,
+      "Ray Amplifier": 7,
+      "Time": 15.0,
+      "Water": 225
+    }
+  },
+  "Industrial Dew Scythe Mk4": {
+    "fabricators": [
+      "Survival Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 25,
+      "Cobalt Paste": 12,
+      "EMF Generator": 10,
+      "Industrial Pump": 5,
+      "Silicone Block": 17,
+      "Time": 15.0,
+      "Water": 225
+    }
+  },
+  "Industrial Static Compactor": {
+    "fabricators": [
+      "Survival Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 24,
+      "Cobalt Paste": 12,
+      "EMF Generator": 14,
+      "Time": 15.0,
+      "Water": 225
     }
   },
   "Industrial-grade Lubricant": {
@@ -2770,6 +4308,21 @@ const ITEM_DATA = {
       "Water": 25
     }
   },
+  "Ironwatch Special": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 20,
+      "Gun Parts": 20,
+      "Light Caliber Compressor": 5,
+      "Mechanical Parts (1)": 13,
+      "Silicone Block": 20,
+      "Spice-infused Aluminum Dust": 8,
+      "Time": 15.0,
+      "Water": 170
+    }
+  },
   "Irradiated Core": {
     "fabricators": [
       "Advanced Survival Fabricator"
@@ -2795,6 +4348,36 @@ const ITEM_DATA = {
       "Spice-infused Plastanium Dust": 13,
       "Time": 15.0,
       "Water": 610
+    }
+  },
+  "Jolt-knife": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Blade Parts": 22,
+      "Diamondine Dust": 5,
+      "Duraluminum Ingot": 12,
+      "Plant Fiber": 3,
+      "Plasteel Microflora Fiber": 16,
+      "Spice-infused Duraluminum Dust": 8,
+      "Time": 15.0,
+      "Water": 280
+    }
+  },
+  "Jolt-sword": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Blade Parts": 22,
+      "Carbide Scraps": 5,
+      "Duraluminum Ingot": 17,
+      "Plant Fiber": 3,
+      "Plasteel Microflora Fiber": 14,
+      "Spice-infused Duraluminum Dust": 8,
+      "Time": 15.0,
+      "Water": 280
     }
   },
   "Kaleff's Drinker": {
@@ -3142,6 +4725,22 @@ const ITEM_DATA = {
       "Time": 15.0
     }
   },
+  "Kynes's Cutteray": {
+    "fabricators": [
+      "Advanced Survival Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 35,
+      "EMF Generator": 35,
+      "Plastanium Ingot": 55,
+      "Spice Melange": 72,
+      "Spice-infused Plastanium Dust": 14,
+      "Thermo-Responsive Ray Amplifier": 7,
+      "Thermoelectric Cooler": 10,
+      "Time": 15.0,
+      "Water": 700
+    }
+  },
   "Large Blood Sack": {
     "fabricators": [
       "Survival Fabricator"
@@ -3185,7 +4784,7 @@ const ITEM_DATA = {
     "ingredients": {
       "Gun Parts": 8,
       "Iron Ingot": 9,
-      "Mechanical Parts": 6,
+      "Mechanical Parts (1)": 6,
       "Silicone Block": 5,
       "Spice-infused Iron Dust": 5,
       "Time": 15.0
@@ -3237,6 +4836,34 @@ const ITEM_DATA = {
       "Water": 790
     }
   },
+  "Long Range Scanner": {
+    "fabricators": [
+      "Survival Fabricator"
+    ],
+    "ingredients": {
+      "Duraluminum Ingot": 16,
+      "EMF Generator": 18,
+      "Silicone Block": 35,
+      "Spice-infused Duraluminum Dust": 10,
+      "Time": 15.0,
+      "Water": 400
+    }
+  },
+  "Long Shot": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 25,
+      "Gun Parts": 25,
+      "Heavy Caliber Compressor": 5,
+      "Mechanical Parts (1)": 10,
+      "Silicone Block": 15,
+      "Spice-infused Aluminum Dust": 8,
+      "Time": 15.0,
+      "Water": 170
+    }
+  },
   "Low-grade Lubricant": {
     "fabricators": [
       "Medium Chemical Refinery"
@@ -3260,6 +4887,17 @@ const ITEM_DATA = {
       "Spice-infused Duraluminum Dust": 14,
       "Time": 15.0,
       "Water": 510
+    }
+  },
+  "Makeshift Filter": {
+    "fabricators": [
+      "Survival Fabricator"
+    ],
+    "ingredients": {
+      "Plant Fiber": 5,
+      "Steel Ingot": 3,
+      "Time": 15.0,
+      "Water": 60
     }
   },
   "Makeshift Gloves": {
@@ -3583,6 +5221,21 @@ const ITEM_DATA = {
       "Spice-infused Duraluminum Dust": 10,
       "Time": 15.0,
       "Water": 400
+    }
+  },
+  "Mendek's Rattle": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Duraluminum Ingot": 30,
+      "Gun Parts": 33,
+      "Light Caliber Compressor": 6,
+      "Mechanical Parts (1)": 13,
+      "Silicone Block": 30,
+      "Spice-infused Duraluminum Dust": 9,
+      "Time": 15.0,
+      "Water": 340
     }
   },
   "Mendia's Boots": {
@@ -4017,6 +5670,20 @@ const ITEM_DATA = {
       "Water": 200
     }
   },
+  "Mohandis Sandbike Engine Mk4": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 60,
+      "Cobalt Paste": 31,
+      "Complex Machinery": 26,
+      "Particle Capacitor": 18,
+      "Spice-infused Aluminum Dust": 22,
+      "Time": 20.0,
+      "Water": 507
+    }
+  },
   "Mohandis Sandbike Engine Mk5": {
     "fabricators": [
       "Vehicle Fabricator"
@@ -4030,6 +5697,37 @@ const ITEM_DATA = {
       "Spice-infused Duraluminum Dust": 26,
       "Time": 20.0,
       "Water": 1010
+    }
+  },
+  "Mohandis Sandbike Engine Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Machinery": 30,
+      "Cobalt Paste": 77,
+      "Particle Capacitor": 31,
+      "Plastanium Ingot": 100,
+      "Spice Melange": 186,
+      "Spice-infused Plastanium Dust": 31,
+      "Time": 20.0,
+      "Tri-Forged Hydraulic Piston": 15,
+      "Water": 1580
+    }
+  },
+  "Moisture Sealer": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Blade Parts": 22,
+      "Diamondine Dust": 5,
+      "Duraluminum Ingot": 12,
+      "Plant Fiber": 3,
+      "Plasteel Microflora Fiber": 16,
+      "Spice-infused Duraluminum Dust": 8,
+      "Time": 15.0,
+      "Water": 280
     }
   },
   "Native Stillsuit Body": {
@@ -4095,6 +5793,63 @@ const ITEM_DATA = {
       "Particle Capacitor": 17,
       "Spice-infused Iron Dust": 13,
       "Time": 15.0
+    }
+  },
+  "Night Rider Sandbike Boost Mk3": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 20,
+      "Holtzman Actuator": 25,
+      "Particle Capacitor": 35,
+      "Spice-infused Steel Dust": 17,
+      "Steel Ingot": 35,
+      "Time": 20.0,
+      "Water": 200
+    }
+  },
+  "Night Rider Sandbike Boost Mk4": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 70,
+      "Cobalt Paste": 31,
+      "Holtzman Actuator": 36,
+      "Particle Capacitor": 45,
+      "Spice-infused Aluminum Dust": 22,
+      "Time": 20.0,
+      "Water": 510
+    }
+  },
+  "Night Rider Sandbike Boost Mk5": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 41,
+      "Duraluminum Ingot": 90,
+      "Holtzman Actuator": 17,
+      "Particle Capacitor": 60,
+      "Spice-infused Duraluminum Dust": 26,
+      "Time": 20.0,
+      "Water": 1010
+    }
+  },
+  "Night Rider Sandbike Boost Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 77,
+      "Improved Holtzman Actuator": 20,
+      "Particle Capacitor": 78,
+      "Plastanium Ingot": 110,
+      "Spice Melange": 186,
+      "Spice-infused Plastanium Dust": 31,
+      "Time": 20.0,
+      "Water": 1580
     }
   },
   "Oathbreaker Boots": {
@@ -4229,6 +5984,36 @@ const ITEM_DATA = {
       "Time": 15.0
     }
   },
+  "Omni Focused Dew Scythe": {
+    "fabricators": [
+      "Advanced Survival Fabricator"
+    ],
+    "ingredients": {
+      "EMF Generator": 28,
+      "Fluid Efficient Industrial Pump": 9,
+      "Plastanium Ingot": 55,
+      "Silicone Block": 41,
+      "Spice Melange": 93,
+      "Spice-infused Plastanium Dust": 14,
+      "Time": 15.0,
+      "Water": 700
+    }
+  },
+  "Omni Static Compactor": {
+    "fabricators": [
+      "Advanced Survival Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 30,
+      "EMF Generator": 24,
+      "Improved Holtzman Actuator": 8,
+      "Plastanium Ingot": 40,
+      "Spice Melange": 45,
+      "Thermoelectric Cooler": 7,
+      "Time": 15.0,
+      "Water": 700
+    }
+  },
   "Overclocked Power Regulator": {
     "fabricators": [
       "Advanced Survival Fabricator"
@@ -4253,6 +6038,21 @@ const ITEM_DATA = {
       "Spice-infused Duraluminum Dust": 10,
       "Time": 15.0,
       "Water": 390
+    }
+  },
+  "Pardot's Drinker": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Blade Parts": 22,
+      "Diamondine Dust": 5,
+      "Duraluminum Ingot": 12,
+      "Plant Fiber": 3,
+      "Plasteel Microflora Fiber": 16,
+      "Spice-infused Duraluminum Dust": 8,
+      "Time": 15.0,
+      "Water": 280
     }
   },
   "Pardot's Hood": {
@@ -4300,6 +6100,22 @@ const ITEM_DATA = {
     ],
     "ingredients": {
       "Fluted Heavy Caliber Compressor": 6,
+      "Mechanical Parts (1)": 16,
+      "Plastanium Ingot": 45,
+      "Plasteel Composite Gun Parts": 16,
+      "Silicone Block": 31,
+      "Spice Melange": 62,
+      "Spice-infused Plastanium Dust": 10,
+      "Time": 15.0,
+      "Water": 530
+    }
+  },
+  "Perforator": {
+    "fabricators": [
+      "Advanced Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Fluted Light Caliber Compressor": 6,
       "Mechanical Parts (1)": 16,
       "Plastanium Ingot": 45,
       "Plasteel Composite Gun Parts": 16,
@@ -4395,6 +6211,36 @@ const ITEM_DATA = {
       "Water": 610
     }
   },
+  "Pipecleaner": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 24,
+      "Gun Parts": 25,
+      "Light Caliber Compressor": 5,
+      "Mechanical Parts (1)": 10,
+      "Silicone Block": 15,
+      "Spice-infused Aluminum Dust": 8,
+      "Time": 15.0,
+      "Water": 170
+    }
+  },
+  "Piter's Disruptor": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Duraluminum Ingot": 28,
+      "Gun Parts": 26,
+      "Light Caliber Compressor": 6,
+      "Mechanical Parts (1)": 16,
+      "Silicone Block": 38,
+      "Spice-infused Duraluminum Dust": 9,
+      "Time": 15.0,
+      "Water": 340
+    }
+  },
   "Planar Suspensor Belt": {
     "fabricators": [
       "Survival Fabricator"
@@ -4408,6 +6254,22 @@ const ITEM_DATA = {
       "Water": 100
     }
   },
+  "Plasma Cannon": {
+    "fabricators": [
+      "Advanced Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Fluted Heavy Caliber Compressor": 9,
+      "Mechanical Parts (1)": 10,
+      "Plastanium Ingot": 50,
+      "Plasteel Composite Gun Parts": 17,
+      "Silicone Block": 31,
+      "Spice Melange": 62,
+      "Spice-infused Plastanium Dust": 10,
+      "Time": 15.0,
+      "Water": 530
+    }
+  },
   "Plastanium Ingot": {
     "fabricators": [
       "Medium Ore Refinery"
@@ -4417,6 +6279,18 @@ const ITEM_DATA = {
       "Time": 30.0,
       "Titanium Ore": 6,
       "Water": 1250
+    }
+  },
+  "Plasteel Composite Armor Plating": {
+    "fabricators": [
+      "Advanced Survival Fabricator"
+    ],
+    "ingredients": {
+      "Armor Plating": 3,
+      "Plasteel Plate": 2,
+      "Spice Melange": 1,
+      "Time": 3.0,
+      "Water": 50
     }
   },
   "Plasteel Composite Blade Parts": {
@@ -4452,6 +6326,21 @@ const ITEM_DATA = {
       "Silicone Block": 1,
       "Time": 5.0,
       "Water": 50
+    }
+  },
+  "Poison Mist": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 14,
+      "Blade Parts": 17,
+      "Carbide Scraps": 3,
+      "Plant Fiber": 3,
+      "Plasteel Microflora Fiber": 10,
+      "Spice-infused Aluminum Dust": 7,
+      "Time": 15.0,
+      "Water": 140
     }
   },
   "Power Gauntlets": {
@@ -4516,6 +6405,18 @@ const ITEM_DATA = {
       "Steel Ingot": 9,
       "Time": 15.0,
       "Water": 70
+    }
+  },
+  "Power Pack Mk4": {
+    "fabricators": [
+      "Survival Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 18,
+      "Cobalt Paste": 9,
+      "Particle Capacitor": 11,
+      "Time": 15.0,
+      "Water": 169
     }
   },
   "Power Pack Mk5": {
@@ -4694,6 +6595,63 @@ const ITEM_DATA = {
       "Water": 1050
     }
   },
+  "Rattler Boost Module Mk3": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 20,
+      "Holtzman Actuator": 25,
+      "Particle Capacitor": 35,
+      "Spice-infused Steel Dust": 17,
+      "Steel Ingot": 35,
+      "Time": 15.0,
+      "Water": 200
+    }
+  },
+  "Rattler Boost Module Mk4": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 70,
+      "Cobalt Paste": 30,
+      "Holtzman Actuator": 36,
+      "Particle Capacitor": 45,
+      "Spice-infused Aluminum Dust": 22,
+      "Time": 20.0,
+      "Water": 510
+    }
+  },
+  "Rattler Boost Module Mk5": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 41,
+      "Duraluminum Ingot": 90,
+      "Holtzman Actuator": 17,
+      "Particle Capacitor": 60,
+      "Spice-infused Duraluminum Dust": 26,
+      "Time": 20.0,
+      "Water": 1010
+    }
+  },
+  "Rattler Boost Module Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 77,
+      "Improved Holtzman Actuator": 20,
+      "Particle Capacitor": 78,
+      "Plastanium Ingot": 110,
+      "Spice Melange": 186,
+      "Spice-infused Plastanium Dust": 31,
+      "Time": 20.0,
+      "Water": 1580
+    }
+  },
   "Reaper Gloves": {
     "fabricators": [
       "Wearables Fabricator"
@@ -4705,6 +6663,98 @@ const ITEM_DATA = {
       "Steel Ingot": 7,
       "Time": 15.0,
       "Water": 45
+    }
+  },
+  "Regis Burst Drillshot": {
+    "fabricators": [
+      "Advanced Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Fluted Heavy Caliber Compressor": 6,
+      "Mechanical Parts (1)": 16,
+      "Plastanium Ingot": 45,
+      "Plasteel Composite Gun Parts": 16,
+      "Silicone Block": 31,
+      "Spice Melange": 62,
+      "Spice-infused Plastanium Dust": 10,
+      "Time": 15.0,
+      "Water": 530
+    }
+  },
+  "Regis Dirk": {
+    "fabricators": [
+      "Advanced Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Diamondine Dust": 7,
+      "Plant Fiber": 3,
+      "Plastanium Ingot": 12,
+      "Plasteel Composite Blade Parts": 10,
+      "Plasteel Microflora Fiber": 18,
+      "Spice Melange": 20,
+      "Time": 15.0,
+      "Water": 440
+    }
+  },
+  "Regis Disruptor M11": {
+    "fabricators": [
+      "Advanced Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Light Caliber Compressor": 8,
+      "Mechanical Parts (1)": 18,
+      "Plastanium Ingot": 30,
+      "Plasteel Composite Gun Parts": 12,
+      "Silicone Block": 34,
+      "Spice Melange": 25,
+      "Time": 15.0,
+      "Water": 530
+    }
+  },
+  "Regis Disruptor Pistol": {
+    "fabricators": [
+      "Advanced Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Fluted Heavy Caliber Compressor": 6,
+      "Mechanical Parts (1)": 28,
+      "Plastanium Ingot": 30,
+      "Plasteel Composite Gun Parts": 14,
+      "Silicone Block": 31,
+      "Spice Melange": 62,
+      "Spice-infused Plastanium Dust": 10,
+      "Time": 15.0,
+      "Water": 530
+    }
+  },
+  "Regis Drillshot FK7": {
+    "fabricators": [
+      "Advanced Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Heavy Caliber Compressor": 8,
+      "Mechanical Parts (1)": 14,
+      "Plastanium Ingot": 40,
+      "Plasteel Composite Gun Parts": 14,
+      "Silicone Block": 27,
+      "Spice Melange": 25,
+      "Time": 15.0,
+      "Water": 530
+    }
+  },
+  "Regis GRDA 44": {
+    "fabricators": [
+      "Advanced Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Light Caliber Compressor": 8,
+      "Mechanical Parts (1)": 14,
+      "Plastanium Ingot": 40,
+      "Plasteel Composite Gun Parts": 14,
+      "Silicone Block": 27,
+      "Spice Melange": 25,
+      "Time": 15.0,
+      "Water": 530
     }
   },
   "Regis JABAL Spitdart": {
@@ -4722,6 +6772,127 @@ const ITEM_DATA = {
       "Water": 530
     }
   },
+  "Regis Karpov 38": {
+    "fabricators": [
+      "Advanced Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Light Caliber Compressor": 8,
+      "Mechanical Parts (1)": 14,
+      "Plastanium Ingot": 32,
+      "Plasteel Composite Gun Parts": 14,
+      "Silicone Block": 27,
+      "Spice Melange": 25,
+      "Time": 15.0,
+      "Water": 530
+    }
+  },
+  "Regis Kindjal": {
+    "fabricators": [
+      "Advanced Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Diamondine Dust": 7,
+      "Plant Fiber": 3,
+      "Plastanium Ingot": 12,
+      "Plasteel Composite Blade Parts": 10,
+      "Plasteel Microflora Fiber": 18,
+      "Spice Melange": 20,
+      "Time": 15.0,
+      "Water": 440
+    }
+  },
+  "Regis Maula Pistol": {
+    "fabricators": [
+      "Advanced Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Light Caliber Compressor": 8,
+      "Mechanical Parts (1)": 23,
+      "Plastanium Ingot": 22,
+      "Plasteel Composite Gun Parts": 12,
+      "Silicone Block": 27,
+      "Spice Melange": 25,
+      "Time": 15.0,
+      "Water": 530
+    }
+  },
+  "Regis Missile Launcher": {
+    "fabricators": [
+      "Advanced Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Mechanical Parts (1)": 23,
+      "Plastanium Ingot": 60,
+      "Plasteel Composite Gun Parts": 21,
+      "Range Finder": 11,
+      "Silicone Block": 41,
+      "Spice Melange": 30,
+      "Time": 15.0,
+      "Water": 530
+    }
+  },
+  "Regis Rafiq Snubnose": {
+    "fabricators": [
+      "Advanced Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Heavy Caliber Compressor": 8,
+      "Mechanical Parts (1)": 24,
+      "Plastanium Ingot": 25,
+      "Plasteel Composite Gun Parts": 12,
+      "Silicone Block": 27,
+      "Spice Melange": 25,
+      "Time": 15.0,
+      "Water": 530
+    }
+  },
+  "Regis Rapier": {
+    "fabricators": [
+      "Advanced Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Carbide Scraps": 7,
+      "Plant Fiber": 3,
+      "Plastanium Ingot": 30,
+      "Plasteel Composite Blade Parts": 10,
+      "Plasteel Microflora Fiber": 15,
+      "Spice Melange": 20,
+      "Time": 15.0,
+      "Water": 440
+    }
+  },
+  "Regis Sword": {
+    "fabricators": [
+      "Advanced Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Carbide Scraps": 7,
+      "Plant Fiber": 3,
+      "Plastanium Ingot": 30,
+      "Plasteel Composite Blade Parts": 10,
+      "Plasteel Microflora Fiber": 15,
+      "Spice Melange": 20,
+      "Time": 15.0,
+      "Water": 440
+    }
+  },
+  "Regis Tripleshot Repeating Rifle": {
+    "fabricators": [
+      "Advanced Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Fluted Heavy Caliber Compressor": 6,
+      "Mechanical Parts (1)": 16,
+      "Plastanium Ingot": 45,
+      "Plasteel Composite Gun Parts": 16,
+      "Silicone Block": 31,
+      "Spice Melange": 62,
+      "Spice-infused Plastanium Dust": 10,
+      "Time": 15.0,
+      "Water": 530
+    }
+  },
   "Regis Vulcan GAU-92": {
     "fabricators": [
       "Advanced Weapons Fabricator"
@@ -4735,6 +6906,53 @@ const ITEM_DATA = {
       "Spice Melange": 25,
       "Time": 15.0,
       "Water": 530
+    }
+  },
+  "Relentless": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Duraluminum Ingot": 28,
+      "Gun Parts": 26,
+      "Light Caliber Compressor": 6,
+      "Mechanical Parts (1)": 16,
+      "Silicone Block": 38,
+      "Spice-infused Duraluminum Dust": 9,
+      "Time": 15.0,
+      "Water": 340
+    }
+  },
+  "Replica Pulse-knife": {
+    "fabricators": [
+      "Advanced Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Diamodine blade parts": 5,
+      "Plant Fiber": 3,
+      "Plastanium Ingot": 21,
+      "Plasteel Composite Blade Parts": 6,
+      "Plasteel Microflora Fiber": 21,
+      "Spice Melange": 53,
+      "Spice-infused Plastanium Dust": 9,
+      "Time": 15.0,
+      "Water": 440
+    }
+  },
+  "Replica Pulse-sword": {
+    "fabricators": [
+      "Advanced Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Carbide blade parts": 5,
+      "Plant Fiber": 3,
+      "Plastanium Ingot": 35,
+      "Plasteel Composite Blade Parts": 6,
+      "Plasteel Microflora Fiber": 17,
+      "Spice Melange": 53,
+      "Spice-infused Plastanium Dust": 9,
+      "Time": 15.0,
+      "Water": 440
     }
   },
   "Respawn Beacon": {
@@ -4774,6 +6992,20 @@ const ITEM_DATA = {
       "Water": 90
     }
   },
+  "Ripper": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Gun Parts": 16,
+      "Mechanical Parts (1)": 7,
+      "Silicone Block": 6,
+      "Spice-infused Steel Dust": 6,
+      "Steel Ingot": 14,
+      "Time": 15.0,
+      "Water": 70
+    }
+  },
   "Robe of the Sisterhood": {
     "fabricators": [
       "Wearables Fabricator"
@@ -4786,6 +7018,48 @@ const ITEM_DATA = {
       "Spice-infused Duraluminum Dust": 12,
       "Time": 15.0,
       "Water": 450
+    }
+  },
+  "Roc Carrier Wing": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 10,
+      "Cobalt Paste": 13,
+      "Fluid Efficient Industrial Pump": 2,
+      "Plastanium Ingot": 15,
+      "Spice Melange": 35,
+      "Spice-infused Plastanium Dust": 10,
+      "Time": 20.0,
+      "Water": 400
+    }
+  },
+  "Rocket": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Duraluminum Ingot": 2,
+      "Fuel Cell": 10,
+      "Time": 3.0,
+      "Water": 50
+    }
+  },
+  "Salusan Vengeance": {
+    "fabricators": [
+      "Advanced Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Fluted Light Caliber Compressor": 6,
+      "Mechanical Parts (1)": 16,
+      "Plastanium Ingot": 40,
+      "Plasteel Composite Gun Parts": 16,
+      "Silicone Block": 31,
+      "Spice Melange": 62,
+      "Spice-infused Plastanium Dust": 10,
+      "Time": 15.0,
+      "Water": 530
     }
   },
   "Sandbike Backseat Mk1": {
@@ -4811,6 +7085,32 @@ const ITEM_DATA = {
       "Time": 20.0
     }
   },
+  "Sandbike Booster Mk3": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 17,
+      "Holtzman Actuator": 25,
+      "Particle Capacitor": 29,
+      "Steel Ingot": 30,
+      "Time": 20.0,
+      "Water": 200
+    }
+  },
+  "Sandbike Booster Mk4": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 60,
+      "Cobalt Paste": 30,
+      "Holtzman Actuator": 31,
+      "Particle Capacitor": 40,
+      "Time": 20.0,
+      "Water": 510
+    }
+  },
   "Sandbike Booster Mk5": {
     "fabricators": [
       "Vehicle Fabricator"
@@ -4822,6 +7122,20 @@ const ITEM_DATA = {
       "Particle Capacitor": 50,
       "Time": 20.0,
       "Water": 1010
+    }
+  },
+  "Sandbike Booster Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 67,
+      "Improved Holtzman Actuator": 17,
+      "Particle Capacitor": 68,
+      "Plastanium Ingot": 95,
+      "Spice Melange": 81,
+      "Time": 20.0,
+      "Water": 1580
     }
   },
   "Sandbike Chassis Mk1": {
@@ -4856,6 +7170,19 @@ const ITEM_DATA = {
       "Steel Ingot": 25,
       "Time": 20.0,
       "Water": 135
+    }
+  },
+  "Sandbike Chassis Mk4": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 16,
+      "Aluminum Ingot": 45,
+      "Carbide Scraps": 7,
+      "Cobalt Paste": 18,
+      "Time": 20.0,
+      "Water": 340
     }
   },
   "Sandbike Chassis Mk5": {
@@ -4907,6 +7234,61 @@ const ITEM_DATA = {
       "Time": 20.0
     }
   },
+  "Sandbike Engine Mk3": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 11,
+      "Complex Machinery": 10,
+      "Particle Capacitor": 16,
+      "Steel Ingot": 10,
+      "Time": 20.0,
+      "Water": 135
+    }
+  },
+  "Sandbike Engine Mk4": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 20,
+      "Cobalt Paste": 18,
+      "Complex Machinery": 15,
+      "Particle Capacitor": 11,
+      "Time": 20.0,
+      "Water": 338
+    }
+  },
+  "Sandbike Engine Mk5": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 25,
+      "Complex Machinery": 21,
+      "Duraluminum Ingot": 30,
+      "Hydraulic Piston": 7,
+      "Particle Capacitor": 14,
+      "Time": 20.0,
+      "Water": 675
+    }
+  },
+  "Sandbike Engine Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 45,
+      "Complex Machinery": 30,
+      "Particle Capacitor": 18,
+      "Plastanium Ingot": 30,
+      "Spice Melange": 54,
+      "Time": 20.0,
+      "Tri-Forged Hydraulic Piston": 9,
+      "Water": 1050
+    }
+  },
   "Sandbike Hull Mk1": {
     "fabricators": [
       "Fabricator",
@@ -4928,6 +7310,62 @@ const ITEM_DATA = {
       "Armor Plating": 7,
       "Iron Ingot": 20,
       "Time": 20.0
+    }
+  },
+  "Sandbike Hull Mk3": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 12,
+      "Armor Plating": 13,
+      "Cobalt Paste": 11,
+      "Steel Ingot": 25,
+      "Time": 20.0,
+      "Water": 135
+    }
+  },
+  "Sandbike Hull Mk4": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 16,
+      "Aluminum Ingot": 45,
+      "Armor Plating": 21,
+      "Cobalt Paste": 18,
+      "Diamondine Dust": 7,
+      "Time": 20.0,
+      "Water": 340
+    }
+  },
+  "Sandbike Hull Mk5": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 20,
+      "Armor Plating": 34,
+      "Cobalt Paste": 25,
+      "Diamondine Dust": 10,
+      "Duraluminum Ingot": 60,
+      "Time": 20.0,
+      "Water": 680
+    }
+  },
+  "Sandbike Hull Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 30,
+      "Cobalt Paste": 45,
+      "Diamondine Dust": 15,
+      "Plastanium Ingot": 70,
+      "Plasteel Composite Armor Plating": 30,
+      "Spice Melange": 55,
+      "Time": 20.0,
+      "Water": 1050
     }
   },
   "Sandbike Inventory Mk1": {
@@ -4974,6 +7412,57 @@ const ITEM_DATA = {
       "Time": 20.0
     }
   },
+  "Sandbike PSU Mk3": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 11,
+      "Particle Capacitor": 12,
+      "Steel Ingot": 10,
+      "Time": 20.0,
+      "Water": 135
+    }
+  },
+  "Sandbike PSU Mk4": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 20,
+      "Cobalt Paste": 18,
+      "Particle Capacitor": 16,
+      "Time": 20.0,
+      "Water": 338
+    }
+  },
+  "Sandbike PSU Mk5": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 25,
+      "Duraluminum Ingot": 30,
+      "Military Power Regulator": 7,
+      "Particle Capacitor": 20,
+      "Time": 20.0,
+      "Water": 675
+    }
+  },
+  "Sandbike PSU Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 45,
+      "Overclocked Power Regulator": 9,
+      "Particle Capacitor": 27,
+      "Plastanium Ingot": 30,
+      "Spice Melange": 54,
+      "Time": 20.0,
+      "Water": 1050
+    }
+  },
   "Sandbike Scanner Mk2": {
     "fabricators": [
       "Fabricator",
@@ -5007,6 +7496,140 @@ const ITEM_DATA = {
       "Time": 20.0
     }
   },
+  "Sandbike Tread Mk3": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 5,
+      "Cobalt Paste": 4,
+      "Steel Ingot": 6,
+      "Time": 20.0,
+      "Water": 45
+    }
+  },
+  "Sandbike Tread Mk4": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 7,
+      "Aluminum Ingot": 12,
+      "Cobalt Paste": 6,
+      "Time": 20.0,
+      "Water": 110
+    }
+  },
+  "Sandbike Tread Mk5": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 9,
+      "Cobalt Paste": 8,
+      "Duraluminum Ingot": 16,
+      "Time": 20.0,
+      "Water": 225
+    }
+  },
+  "Sandbike Tread Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 12,
+      "Cobalt Paste": 15,
+      "Plastanium Ingot": 20,
+      "Spice Melange": 14,
+      "Time": 20.0,
+      "Water": 300
+    }
+  },
+  "Sandcrawler Cabin Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 30,
+      "Armor Plating": 45,
+      "Cobalt Paste": 27,
+      "Plastanium Ingot": 13,
+      "Spice Melange": 54,
+      "Time": 20.0,
+      "Water": 1050
+    }
+  },
+  "Sandcrawler Centrifuge Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 35,
+      "Cobalt Paste": 45,
+      "Diamondine Dust": 15,
+      "Plastanium Ingot": 85,
+      "Plasteel Composite Armor Plating": 30,
+      "Spice Melange": 55,
+      "Time": 20.0,
+      "Water": 1050
+    }
+  },
+  "Sandcrawler Chassis Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 36,
+      "Carbide Scraps": 15,
+      "Cobalt Paste": 45,
+      "Plastanium Ingot": 80,
+      "Spice Melange": 55,
+      "Time": 20.0,
+      "Water": 1050
+    }
+  },
+  "Sandcrawler Engine Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 45,
+      "Complex Machinery": 30,
+      "Particle Capacitor": 18,
+      "Plastanium Ingot": 60,
+      "Spice Melange": 54,
+      "Time": 20.0,
+      "Tri-Forged Hydraulic Piston": 9,
+      "Water": 1050
+    }
+  },
+  "Sandcrawler PSU Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 45,
+      "Overclocked Power Regulator": 9,
+      "Particle Capacitor": 36,
+      "Plastanium Ingot": 60,
+      "Spice Melange": 54,
+      "Time": 20.0,
+      "Water": 1050
+    }
+  },
+  "Sandcrawler Tread Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 9,
+      "Cobalt Paste": 12,
+      "Plastanium Ingot": 15,
+      "Spice Melange": 14,
+      "Time": 20.0,
+      "Water": 250
+    }
+  },
   "Sandcrawler Vacuum Mk6": {
     "fabricators": [
       "Advanced Vehicle Fabricator"
@@ -5019,6 +7642,36 @@ const ITEM_DATA = {
       "Spice Melange": 54,
       "Time": 20.0,
       "Water": 1050
+    }
+  },
+  "Sandflies Carver": {
+    "fabricators": [
+      "Survival Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 30,
+      "Cobalt Paste": 14,
+      "EMF Generator": 16,
+      "Ray Amplifier": 8,
+      "Spice-infused Aluminum Dust": 10,
+      "Time": 15.0,
+      "Water": 225
+    }
+  },
+  "Sardaukar Intimidator": {
+    "fabricators": [
+      "Advanced Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Fluted Light Caliber Compressor": 6,
+      "Mechanical Parts (1)": 20,
+      "Plastanium Ingot": 35,
+      "Plasteel Composite Gun Parts": 14,
+      "Silicone Block": 39,
+      "Spice Melange": 62,
+      "Spice-infused Plastanium Dust": 10,
+      "Time": 15.0,
+      "Water": 530
     }
   },
   "Saturnine Stillsuit Boots": {
@@ -5208,14 +7861,31 @@ const ITEM_DATA = {
       "Time": 15.0
     }
   },
+  "Scorchbolt": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 21,
+      "Duraluminum Ingot": 50,
+      "Gun Parts": 47,
+      "Industrial Pump": 10,
+      "Mechanical Parts (1)": 13,
+      "Spice-infused Duraluminum Dust": 18,
+      "Time": 15.0,
+      "Water": 340
+    }
+  },
   "Scout Ornithopter Chassis Mk4": {
-    "fabricators": [],
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
     "ingredients": {
       "Advanced Servoks": 10,
       "Aluminum Ingot": 45,
       "Carbide Scraps": 7,
       "Cobalt Paste": 14,
-      "Time": 15.0,
+      "Time": 20.0,
       "Water": 340
     }
   },
@@ -5247,15 +7917,46 @@ const ITEM_DATA = {
     }
   },
   "Scout Ornithopter Cockpit Mk4": {
-    "fabricators": [],
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
     "ingredients": {
       "Advanced Servoks": 10,
       "Aluminum Ingot": 45,
       "Armor Plating": 11,
       "Cobalt Paste": 14,
       "Diamondine Dust": 7,
-      "Time": 15.0,
+      "Time": 20.0,
       "Water": 340
+    }
+  },
+  "Scout Ornithopter Cockpit Mk5": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 20,
+      "Armor Plating": 34,
+      "Cobalt Paste": 25,
+      "Diamondine Dust": 10,
+      "Duraluminum Ingot": 72,
+      "Time": 20.0,
+      "Water": 680
+    }
+  },
+  "Scout Ornithopter Cockpit Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 30,
+      "Cobalt Paste": 45,
+      "Diamondine Dust": 15,
+      "Plastanium Ingot": 85,
+      "Plasteel Composite Armor Plating": 30,
+      "Spice Melange": 55,
+      "Time": 20.0,
+      "Water": 1050
     }
   },
   "Scout Ornithopter Engine Mk4": {
@@ -5269,6 +7970,20 @@ const ITEM_DATA = {
       "Particle Capacitor": 6,
       "Time": 20.0,
       "Water": 338
+    }
+  },
+  "Scout Ornithopter Engine Mk5": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 25,
+      "Complex Machinery": 21,
+      "Duraluminum Ingot": 48,
+      "Hydraulic Piston": 7,
+      "Particle Capacitor": 14,
+      "Time": 20.0,
+      "Water": 675
     }
   },
   "Scout Ornithopter Engine Mk6": {
@@ -5287,12 +8002,14 @@ const ITEM_DATA = {
     }
   },
   "Scout Ornithopter Generator Mk4": {
-    "fabricators": [],
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
     "ingredients": {
       "Aluminum Ingot": 35,
       "Cobalt Paste": 14,
       "Particle Capacitor": 16,
-      "Time": 15.0,
+      "Time": 20.0,
       "Water": 338
     }
   },
@@ -5324,14 +8041,16 @@ const ITEM_DATA = {
     }
   },
   "Scout Ornithopter Hull Mk4": {
-    "fabricators": [],
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
     "ingredients": {
       "Advanced Servoks": 10,
-      "Aluminum Ingot": 30,
+      "Aluminum Ingot": 45,
       "Armor Plating": 11,
       "Cobalt Paste": 14,
       "Diamondine Dust": 7,
-      "Time": 15.0,
+      "Time": 20.0,
       "Water": 340
     }
   },
@@ -5405,14 +8124,41 @@ const ITEM_DATA = {
       "Water": 507
     }
   },
-  "Scout Ornithopter Storage Module": {
-    "fabricators": [],
+  "Scout Ornithopter Storage Mk4": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
     "ingredients": {
       "Advanced Servoks": 30,
       "Aluminum Ingot": 55,
       "Cobalt Paste": 27,
-      "Time": 15.0,
+      "Time": 20.0,
       "Water": 510
+    }
+  },
+  "Scout Ornithopter Thruster Mk4": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 60,
+      "Cobalt Paste": 27,
+      "Holtzman Actuator": 31,
+      "Particle Capacitor": 40,
+      "Time": 20.0,
+      "Water": 510
+    }
+  },
+  "Scout Ornithopter Thruster Mk5": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Duraluminum Ingot": 80,
+      "Holtzman Actuator": 15,
+      "Particle Capacitor": 50,
+      "Time": 20.0,
+      "Water": 1010
     }
   },
   "Scout Ornithopter Thruster Mk6": {
@@ -5428,17 +8174,6 @@ const ITEM_DATA = {
       "Water": 1580
     }
   },
-  "Scout Ornithopter Thruster Module": {
-    "fabricators": [],
-    "ingredients": {
-      "Aluminum Ingot": 60,
-      "Cobalt Paste": 27,
-      "Holtzman Actuator": 31,
-      "Particle Capacitor": 40,
-      "Time": 15.0,
-      "Water": 510
-    }
-  },
   "Scout Ornithopter Wing Mk4": {
     "fabricators": [
       "Vehicle Fabricator"
@@ -5450,6 +8185,19 @@ const ITEM_DATA = {
       "Industrial Pump": 2,
       "Time": 20.0,
       "Water": 340
+    }
+  },
+  "Scout Ornithopter Wing Mk5": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 7,
+      "Cobalt Paste": 6,
+      "Duraluminum Ingot": 12,
+      "Industrial Pump": 3,
+      "Time": 20.0,
+      "Water": 170
     }
   },
   "Scout Ornithopter Wing Mk6": {
@@ -5472,6 +8220,17 @@ const ITEM_DATA = {
     ],
     "ingredients": {
       "Advanced Servoks": 12,
+      "Steel Ingot": 1,
+      "Time": 20.0
+    }
+  },
+  "Scrap Buggy Engine": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Complex Machinery": 3,
+      "Particle Capacitor": 12,
       "Steel Ingot": 1,
       "Time": 20.0
     }
@@ -5503,6 +8262,16 @@ const ITEM_DATA = {
     "ingredients": {
       "Advanced Servoks": 12,
       "Armor Plating": 10,
+      "Steel Ingot": 1,
+      "Time": 20.0
+    }
+  },
+  "Scrap Buggy Tread": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 2,
       "Steel Ingot": 1,
       "Time": 20.0
     }
@@ -5539,6 +8308,16 @@ const ITEM_DATA = {
       "Time": 20.0
     }
   },
+  "Scrap Light Ornithopter Generator": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 1,
+      "Particle Capacitor": 13,
+      "Time": 20.0
+    }
+  },
   "Scrap Light Ornithopter Wing": {
     "fabricators": [
       "Vehicle Fabricator"
@@ -5560,6 +8339,126 @@ const ITEM_DATA = {
       "Time": 5.0
     }
   },
+  "Scrap Metal Knife (1)": {
+    "fabricators": [
+      "Fabricator",
+      "Personal",
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Salvaged Metal": 3,
+      "Time": 5.0
+    }
+  },
+  "Scrap Sandbike Chassis": {
+    "fabricators": [
+      "Fabricator",
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 4,
+      "Copper Ingot": 9,
+      "Time": 20.0
+    }
+  },
+  "Scrap Sandbike Engine": {
+    "fabricators": [
+      "Fabricator",
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Copper Ingot": 3,
+      "Particle Capacitor": 4,
+      "Time": 20.0
+    }
+  },
+  "Scrap Sandbike Extra Seat": {
+    "fabricators": [
+      "Fabricator",
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 4,
+      "Copper Ingot": 9,
+      "Time": 20.0
+    }
+  },
+  "Scrap Sandbike Hull": {
+    "fabricators": [
+      "Fabricator",
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 4,
+      "Copper Ingot": 9,
+      "Time": 20.0
+    }
+  },
+  "Scrap Sandbike Power Supply Unit": {
+    "fabricators": [
+      "Fabricator",
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Copper Ingot": 3,
+      "Particle Capacitor": 4,
+      "Time": 20.0
+    }
+  },
+  "Scrap Sandbike Tread": {
+    "fabricators": [
+      "Fabricator",
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 1,
+      "Copper Ingot": 2,
+      "Time": 20.0
+    }
+  },
+  "Scrubber": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Duraluminum Ingot": 30,
+      "Gun Parts": 33,
+      "Light Caliber Compressor": 6,
+      "Mechanical Parts (1)": 13,
+      "Silicone Block": 30,
+      "Spice-infused Duraluminum Dust": 9,
+      "Time": 15.0,
+      "Water": 340
+    }
+  },
+  "Searing Shiv": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Blade Parts": 10,
+      "Plant Fiber": 3,
+      "Plasteel Microflora Fiber": 10,
+      "Spice-infused Steel Dust": 5,
+      "Steel Ingot": 5,
+      "Time": 15.0,
+      "Water": 60
+    }
+  },
+  "Seb's Kisser": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Gun Parts": 13,
+      "Mechanical Parts (1)": 9,
+      "Silicone Block": 8,
+      "Spice-infused Steel Dust": 6,
+      "Steel Ingot": 10,
+      "Time": 15.0,
+      "Water": 70
+    }
+  },
   "Seeker Helmet": {
     "fabricators": [
       "Advanced Wearables Fabricator"
@@ -5571,6 +8470,22 @@ const ITEM_DATA = {
       "Precision Range Finder": 6,
       "Silicone Block": 30,
       "Spice Melange": 60,
+      "Spice-infused Plastanium Dust": 10,
+      "Time": 15.0,
+      "Water": 530
+    }
+  },
+  "Seethe": {
+    "fabricators": [
+      "Advanced Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Fluted Heavy Caliber Compressor": 6,
+      "Mechanical Parts (1)": 28,
+      "Plastanium Ingot": 30,
+      "Plasteel Composite Gun Parts": 14,
+      "Silicone Block": 31,
+      "Spice Melange": 62,
       "Spice-infused Plastanium Dust": 10,
       "Time": 15.0,
       "Water": 530
@@ -5704,6 +8619,36 @@ const ITEM_DATA = {
       "Water": 170
     }
   },
+  "Shadrath's Drinker": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 9,
+      "Blade Parts": 17,
+      "Diamondine Dust": 3,
+      "Plant Fiber": 3,
+      "Plasteel Microflora Fiber": 13,
+      "Spice-infused Aluminum Dust": 7,
+      "Time": 15.0,
+      "Water": 140
+    }
+  },
+  "Shadrath's Edge": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 16,
+      "Gun Parts": 20,
+      "Light Caliber Compressor": 5,
+      "Mechanical Parts (1)": 16,
+      "Silicone Block": 15,
+      "Spice-infused Aluminum Dust": 8,
+      "Time": 15.0,
+      "Water": 170
+    }
+  },
   "Shadrath's Stillsuit Boots": {
     "fabricators": [
       "Wearables Fabricator"
@@ -5775,6 +8720,38 @@ const ITEM_DATA = {
       "Water": 340
     }
   },
+  "Shellburster": {
+    "fabricators": [
+      "Advanced Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Fluted Light Caliber Compressor": 6,
+      "Mechanical Parts (1)": 16,
+      "Plastanium Ingot": 45,
+      "Plasteel Composite Gun Parts": 16,
+      "Silicone Block": 31,
+      "Spice Melange": 62,
+      "Spice-infused Plastanium Dust": 10,
+      "Time": 15.0,
+      "Water": 530
+    }
+  },
+  "Shishakli's Bite": {
+    "fabricators": [
+      "Advanced Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Fluted Light Caliber Compressor": 6,
+      "Mechanical Parts (1)": 25,
+      "Plastanium Ingot": 25,
+      "Plasteel Composite Gun Parts": 14,
+      "Silicone Block": 31,
+      "Spice Melange": 62,
+      "Spice-infused Plastanium Dust": 10,
+      "Time": 15.0,
+      "Water": 530
+    }
+  },
   "Shock Gauntlets": {
     "fabricators": [
       "Wearables Fabricator"
@@ -5787,6 +8764,34 @@ const ITEM_DATA = {
       "Steel Ingot": 10,
       "Time": 15.0,
       "Water": 45
+    }
+  },
+  "Shock-Knife": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Blade Parts": 10,
+      "Plant Fiber": 3,
+      "Plasteel Microflora Fiber": 10,
+      "Spice-infused Steel Dust": 5,
+      "Steel Ingot": 5,
+      "Time": 15.0,
+      "Water": 60
+    }
+  },
+  "Shock-sword": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Blade Parts": 10,
+      "Plant Fiber": 3,
+      "Plasteel Microflora Fiber": 8,
+      "Spice-infused Steel Dust": 5,
+      "Steel Ingot": 7,
+      "Time": 15.0,
+      "Water": 60
     }
   },
   "Shredder": {
@@ -6082,6 +9087,36 @@ const ITEM_DATA = {
       "Water": 260
     }
   },
+  "Spark-Knife": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 9,
+      "Blade Parts": 17,
+      "Diamondine Dust": 3,
+      "Plant Fiber": 3,
+      "Plasteel Microflora Fiber": 13,
+      "Spice-infused Aluminum Dust": 7,
+      "Time": 15.0,
+      "Water": 140
+    }
+  },
+  "Spark-sword": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 14,
+      "Blade Parts": 17,
+      "Carbide Scraps": 3,
+      "Plant Fiber": 3,
+      "Plasteel Microflora Fiber": 10,
+      "Spice-infused Aluminum Dust": 7,
+      "Time": 15.0,
+      "Water": 140
+    }
+  },
   "Spice Mask": {
     "fabricators": [
       "Wearables Fabricator"
@@ -6135,6 +9170,21 @@ const ITEM_DATA = {
       "Solari": 15000,
       "Steel Ingot": 15,
       "Time": 20.0
+    }
+  },
+  "Stammershot": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Aluminum Ingot": 24,
+      "Gun Parts": 25,
+      "Light Caliber Compressor": 5,
+      "Mechanical Parts (1)": 10,
+      "Silicone Block": 15,
+      "Spice-infused Aluminum Dust": 8,
+      "Time": 15.0,
+      "Water": 170
     }
   },
   "Standard Disruptor M11": {
@@ -6253,6 +9303,22 @@ const ITEM_DATA = {
       "Time": 15.0
     }
   },
+  "Static Needle": {
+    "fabricators": [
+      "Advanced Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Carbide blade parts": 5,
+      "Plant Fiber": 3,
+      "Plastanium Ingot": 35,
+      "Plasteel Composite Blade Parts": 6,
+      "Plasteel Microflora Fiber": 17,
+      "Spice Melange": 53,
+      "Spice-infused Plastanium Dust": 9,
+      "Time": 15.0,
+      "Water": 440
+    }
+  },
   "Station Garb": {
     "fabricators": [
       "Wearables Fabricator"
@@ -6281,6 +9347,35 @@ const ITEM_DATA = {
       "Water": 225
     }
   },
+  "Steady Assault Boost Module Mk5": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 41,
+      "Duraluminum Ingot": 90,
+      "Holtzman Actuator": 17,
+      "Particle Capacitor": 60,
+      "Spice-infused Duraluminum Dust": 26,
+      "Time": 20.0,
+      "Water": 1010
+    }
+  },
+  "Steady Assault Boost Module Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 77,
+      "Improved Holtzman Actuator": 20,
+      "Particle Capacitor": 78,
+      "Plastanium Ingot": 110,
+      "Spice Melange": 186,
+      "Spice-infused Plastanium Dust": 31,
+      "Time": 20.0,
+      "Water": 1580
+    }
+  },
   "Steady Carrier Boost Module Mk6": {
     "fabricators": [
       "Advanced Vehicle Fabricator"
@@ -6297,12 +9392,12 @@ const ITEM_DATA = {
   },
   "Steel Ingot": {
     "fabricators": [
-      "Small Ore Refinery"
+      "Large Ore Refinery"
     ],
     "ingredients": {
-      "Carbon Ore": 4,
+      "Carbon Ore": 2,
       "Iron Ingot": 1,
-      "Time": 5.0,
+      "Time": 3.0,
       "Water": 50
     }
   },
@@ -6341,6 +9436,45 @@ const ITEM_DATA = {
       "Spice-infused Aluminum Dust": 22,
       "Time": 15.0,
       "Water": 510
+    }
+  },
+  "Stormrider Boost Module Mk5": {
+    "fabricators": [
+      "Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 41,
+      "Duraluminum Ingot": 95,
+      "Holtzman Actuator": 17,
+      "Particle Capacitor": 60,
+      "Spice-infused Duraluminum Dust": 26,
+      "Time": 20.0,
+      "Water": 1010
+    }
+  },
+  "Stormrider Boost Module Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 77,
+      "Improved Holtzman Actuator": 20,
+      "Particle Capacitor": 78,
+      "Plastanium Ingot": 110,
+      "Spice Melange": 186,
+      "Spice-infused Plastanium Dust": 31,
+      "Time": 20.0,
+      "Water": 1580
+    }
+  },
+  "Stravidium Fiber": {
+    "fabricators": [
+      "Medium Chemical Refinery"
+    ],
+    "ingredients": {
+      "Stravidium Mass": 3,
+      "Time": 10.0,
+      "Water": 100
     }
   },
   "Survey Probe": {
@@ -6490,6 +9624,21 @@ const ITEM_DATA = {
       "Water": 340
     }
   },
+  "Syndicate Impaler": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Duraluminum Ingot": 35,
+      "Gun Parts": 33,
+      "Light Caliber Compressor": 6,
+      "Mechanical Parts (1)": 13,
+      "Silicone Block": 30,
+      "Spice-infused Duraluminum Dust": 9,
+      "Time": 15.0,
+      "Water": 340
+    }
+  },
   "Syndicate Pants": {
     "fabricators": [
       "Wearables Fabricator"
@@ -6532,6 +9681,36 @@ const ITEM_DATA = {
       "Water": 440
     }
   },
+  "Taqwa's Double": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Duraluminum Ingot": 20,
+      "Gun Parts": 26,
+      "Light Caliber Compressor": 6,
+      "Mechanical Parts (1)": 21,
+      "Silicone Block": 30,
+      "Spice-infused Duraluminum Dust": 9,
+      "Time": 15.0,
+      "Water": 340
+    }
+  },
+  "Tarl Cutteray": {
+    "fabricators": [
+      "Survival Fabricator"
+    ],
+    "ingredients": {
+      "Cobalt Paste": 18,
+      "Duraluminum Ingot": 45,
+      "EMF Generator": 20,
+      "Ray Amplifier": 12,
+      "Spice-infused Duraluminum Dust": 10,
+      "Thermoelectric Cooler": 8,
+      "Time": 15.0,
+      "Water": 450
+    }
+  },
   "Tarl Softstep Boots": {
     "fabricators": [
       "Wearables Fabricator"
@@ -6544,6 +9723,22 @@ const ITEM_DATA = {
       "Spice-infused Duraluminum Dust": 8,
       "Time": 15.0,
       "Water": 280
+    }
+  },
+  "The Ancient Way": {
+    "fabricators": [
+      "Advanced Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Mechanical Parts (1)": 26,
+      "Plastanium Ingot": 70,
+      "Plasteel Composite Gun Parts": 24,
+      "Precision Range Finder": 6,
+      "Silicone Block": 47,
+      "Spice Melange": 62,
+      "Spice-infused Plastanium Dust": 10,
+      "Time": 15.0,
+      "Water": 530
     }
   },
   "The Baron's Bloodbag": {
@@ -6717,6 +9912,20 @@ const ITEM_DATA = {
       "Water": 610
     }
   },
+  "The Tapper": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Gun Parts": 16,
+      "Mechanical Parts (1)": 7,
+      "Silicone Block": 6,
+      "Spice-infused Steel Dust": 6,
+      "Steel Ingot": 12,
+      "Time": 15.0,
+      "Water": 70
+    }
+  },
   "Thermo-Responsive Ray Amplifier": {
     "fabricators": [
       "Advanced Survival Fabricator"
@@ -6727,6 +9936,21 @@ const ITEM_DATA = {
       "Ray Amplifier": 3,
       "Time": 3.0,
       "Water": 50
+    }
+  },
+  "Thufir's Best": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Duraluminum Ingot": 35,
+      "Gun Parts": 33,
+      "Heavy Caliber Compressor": 6,
+      "Mechanical Parts (1)": 13,
+      "Silicone Block": 30,
+      "Spice-infused Duraluminum Dust": 9,
+      "Time": 15.0,
+      "Water": 340
     }
   },
   "Tri-Forged Hydraulic Piston": {
@@ -6821,30 +10045,20 @@ const ITEM_DATA = {
       "Worm Tooth": 1
     }
   },
-  "User:Emil/Menol's Stillsuit Garment": {
+  "Vaporizer": {
     "fabricators": [
-      "Fabricator",
-      "Wearables Fabricator"
+      "Advanced Weapons Fabricator"
     ],
     "ingredients": {
-      "Iron Ingot": 14,
-      "Micro-sandwich Fabric": 17,
-      "Plant Fiber": 8,
-      "Spice-infused Iron Dust": 8,
-      "Time": 15.0
-    }
-  },
-  "User:Emil/Standard Maula Pistol": {
-    "fabricators": [
-      "Fabricator",
-      "Weapons Fabricator"
-    ],
-    "ingredients": {
-      "Gun Parts": 7,
-      "Iron Ingot": 5,
-      "Mechanical Parts": 7,
-      "Silicone Block": 3,
-      "Time": 15.0
+      "Cobalt Paste": 33,
+      "Fluid Efficient Industrial Pump": 8,
+      "Mechanical Parts (1)": 16,
+      "Plastanium Ingot": 85,
+      "Plasteel Composite Gun Parts": 21,
+      "Spice Melange": 70,
+      "Spice-infused Plastanium Dust": 14,
+      "Time": 15.0,
+      "Water": 530
     }
   },
   "Vehicle Backup Tool": {
@@ -6869,6 +10083,16 @@ const ITEM_DATA = {
       "Spice-infused Duraluminum Dust": 9,
       "Time": 15.0,
       "Water": 340
+    }
+  },
+  "Vertical Staking Unit": {
+    "fabricators": [
+      "Survival Fabricator"
+    ],
+    "ingredients": {
+      "Solari": 15000,
+      "Steel Ingot": 15,
+      "Time": 20.0
     }
   },
   "Villari's Stillsuit Boots": {
@@ -6931,6 +10155,37 @@ const ITEM_DATA = {
       "Water": 530
     }
   },
+  "Walker Sandcrawler Engine Mk6": {
+    "fabricators": [
+      "Advanced Vehicle Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Machinery": 30,
+      "Cobalt Paste": 77,
+      "Particle Capacitor": 31,
+      "Plastanium Ingot": 100,
+      "Spice Melange": 186,
+      "Spice-infused Plastanium Dust": 31,
+      "Time": 20.0,
+      "Tri-Forged Hydraulic Piston": 15,
+      "Water": 1580
+    }
+  },
+  "Way of the Desert": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Duraluminum Ingot": 20,
+      "Gun Parts": 26,
+      "Light Caliber Compressor": 6,
+      "Mechanical Parts (1)": 21,
+      "Silicone Block": 30,
+      "Spice-infused Duraluminum Dust": 9,
+      "Time": 15.0,
+      "Water": 340
+    }
+  },
   "Way of the Fallen": {
     "fabricators": [
       "Fabricator",
@@ -6938,7 +10193,7 @@ const ITEM_DATA = {
     ],
     "ingredients": {
       "Copper Ingot": 6,
-      "Mechanical Parts": 3,
+      "Mechanical Parts (1)": 3,
       "Spice-infused Copper Dust": 3,
       "Time": 15.0
     }
@@ -6956,6 +10211,36 @@ const ITEM_DATA = {
       "Spice-infused Aluminum Dust": 8,
       "Time": 15.0,
       "Water": 170
+    }
+  },
+  "Way of the Lost": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Gun Parts": 13,
+      "Mechanical Parts (1)": 12,
+      "Silicone Block": 6,
+      "Spice-infused Steel Dust": 6,
+      "Steel Ingot": 8,
+      "Time": 15.0,
+      "Water": 68
+    }
+  },
+  "Way of the Misr": {
+    "fabricators": [
+      "Advanced Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Fluted Light Caliber Compressor": 6,
+      "Mechanical Parts (1)": 25,
+      "Plastanium Ingot": 25,
+      "Plasteel Composite Gun Parts": 14,
+      "Silicone Block": 31,
+      "Spice Melange": 62,
+      "Spice-infused Plastanium Dust": 10,
+      "Time": 15.0,
+      "Water": 530
     }
   },
   "Way of the Wanderer": {
@@ -6999,6 +10284,40 @@ const ITEM_DATA = {
       "Spice-infused Plastanium Dust": 10,
       "Time": 15.0,
       "Water": 530
+    }
+  },
+  "Welding Torch Mk1 (1)": {
+    "fabricators": [
+      "Fabricator",
+      "Survival Fabricator"
+    ],
+    "ingredients": {
+      "Copper Ingot": 6,
+      "Time": 15.0
+    }
+  },
+  "Welding Torch Mk3": {
+    "fabricators": [
+      "Survival Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 8,
+      "Cobalt Paste": 8,
+      "Steel Ingot": 12,
+      "Time": 15.0,
+      "Water": 90
+    }
+  },
+  "Welding Torch Mk5": {
+    "fabricators": [
+      "Survival Fabricator"
+    ],
+    "ingredients": {
+      "Advanced Servoks": 14,
+      "Cobalt Paste": 16,
+      "Duraluminum Ingot": 32,
+      "Time": 15.0,
+      "Water": 450
     }
   },
   "Welding Wire": {
@@ -7067,6 +10386,20 @@ const ITEM_DATA = {
       "Spice-infused Plastanium Dust": 7,
       "Time": 15.0,
       "Water": 350
+    }
+  },
+  "Zaal's Companion": {
+    "fabricators": [
+      "Weapons Fabricator"
+    ],
+    "ingredients": {
+      "Gun Parts": 16,
+      "Mechanical Parts (1)": 7,
+      "Silicone Block": 6,
+      "Spice-infused Steel Dust": 6,
+      "Steel Ingot": 12,
+      "Time": 15.0,
+      "Water": 70
     }
   }
 }
