@@ -1,5 +1,13 @@
 let itemsList = [];
 
+// --- helper to display time as minutes:seconds ---
+function formatMMSS(totalSeconds) {
+  const m = Math.floor(totalSeconds / 60);
+  const s = totalSeconds % 60;
+  return `${m}m ${String(s).padStart(2, "0")}s`;
+}
+// --------------------------------------------------
+
 function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
 }
@@ -349,7 +357,7 @@ function renderResults(total, breakdown) {
     totalCols.appendChild(makeCol('🧱', 'Non-Craftable', baseMaterials));
     totalCols.appendChild(makeCol('⚙️', 'Craftable', craftedMaterials));
     totalCols.appendChild(makeCol('💧', 'Water in mL', waterMaterials, true));
-    totalCols.appendChild(makeCol('⏳', 'Time in seconds', timeMaterials, true));
+    totalCols.appendChild(makeCol('⏳', 'Time (mm:ss)', timeSeconds.map(formatMMSS), true));
 
     totalDiv.appendChild(totalCols);
 
@@ -383,7 +391,7 @@ function renderResults(total, breakdown) {
         itemCols.appendChild(makeCol('🧱', 'Non-Craftable', bBase));
         itemCols.appendChild(makeCol('⚙️', 'Craftable', bCrafted));
         itemCols.appendChild(makeCol('💧', 'Water in mL', bWater, true));
-        itemCols.appendChild(makeCol('⏳', 'Time in seconds', bTime, true));
+        totalCols.appendChild(makeCol('⏳', 'Time (mm:ss)', timeSeconds.map(formatMMSS), true));
 
         breakdownDiv.appendChild(itemCols);
     }
