@@ -20,7 +20,6 @@ async function fetchItems() {
     window.itemDetails = ITEM_DATA;
 
     addItem(); // Add one item row by default
-    renderFabricatorCheckboxes(); // Render fabricator checkboxes on load
 }
 
 function addItem() {
@@ -371,24 +370,36 @@ function renderResults(total, breakdown) {
     breakdownDiv.appendChild(Object.assign(document.createElement('h3'), {
         textContent: 'Breakdown'
     }));
+for (const [itemName, mats] of Object.entries(breakdown)) {
+  const itemData = window.itemDetails[itemName];
+  const fabricators = itemData?.fabricators || [];
 
-    for (const [itemName, mats] of Object.entries(breakdown)) {
-        const title = document.createElement('div');
-        title.className = 'item-title';
-        title.textContent = `📦 ${itemName}`;
-        breakdownDiv.appendChild(title);
+  const itemBlock = document.createElement('div');
+  itemBlock.className = 'breakdown-block';
 
-        const bBase = {};
-        const bCrafted = {};
-        const bWater = {};
-        const bTime = {};
+  const title = document.createElement('div');
+  title.className = 'item-title';
+  title.innerHTML = `<strong>📦 ${itemName}</strong>`;
+  itemBlock.appendChild(title);
 
-        for (const [mat, amt] of Object.entries(mats)) {
-            if (isTime(mat)) bTime[mat] = amt;
-            else if (isWater(mat)) bWater[mat] = amt;
-            else if (isCraftable(mat)) bCrafted[mat] = amt;
-            else bBase[mat] = amt;
-        }
+  if (fabricators.length > 0) {
+    const fabList = document.createElement('div');
+    fabList.className = 'fabricator-list';
+    fabList.innerHTML = `🏭 <em>Fabricator(s):</em> ${fabricators.join(', ')}`;
+    itemBlock.appendChild(fabList);
+  }
+
+  // You can keep this part if you're classifying into base/craft/time/water, etc.
+  for (const [mat, amt] of Object.entries(mats)) {
+    const p = document.createElement('div');
+    p.className = 'breakdown-item';
+    p.textContent = `  - ${mat}: ${amt}`;
+    itemBlock.appendChild(p);
+  }
+
+  breakdownDiv.appendChild(itemBlock);
+}
+
 
         const itemCols = document.createElement('div');
         itemCols.className = 'columns';
