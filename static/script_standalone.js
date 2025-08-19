@@ -300,10 +300,17 @@ function flattenIngredients(item, quantity) {
     return result;
 }
 function formatTime(seconds) {
-  const total = Math.round(seconds); // Round to nearest whole number
-  const mins = Math.floor(total / 60);
+  const total = Math.round(seconds);
+  const hrs = Math.floor(total / 3600);
+  const mins = Math.floor((total % 3600) / 60);
   const secs = total % 60;
-  return mins > 0 ? `${mins} min${secs > 0 ? ` ${secs} sec` : ''}` : `${secs} sec`;
+
+  const parts = [];
+  if (hrs > 0) parts.push(`${hrs} hr`);
+  if (mins > 0) parts.push(`${mins} min`);
+  if (secs > 0 || parts.length === 0) parts.push(`${secs} sec`);
+
+  return parts.join(' ');
 }
 
 function renderResults(total, breakdown) {
