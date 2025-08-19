@@ -20,6 +20,7 @@ async function fetchItems() {
     window.itemDetails = ITEM_DATA;
 
     addItem(); // Add one item row by default
+    renderFabricatorCheckboxes(); // Render fabricator checkboxes on load
 }
 
 function addItem() {
@@ -300,6 +301,7 @@ function flattenIngredients(item, quantity) {
 }
 function formatTime(seconds) {
   const total = Math.round(seconds);
+
   const hrs = Math.floor(total / 3600);
   const mins = Math.floor((total % 3600) / 60);
   const secs = total % 60;
@@ -342,7 +344,7 @@ function renderResults(total, breakdown) {
         for (const [mat, amt] of Object.entries(items)) {
             const d = document.createElement('div');
             d.className = 'material-item';
-          d.textContent = hideNames
+            d.textContent = hideNames
   ? (mat === 'Time' ? formatTime(amt) : `${amt}`)
   : (mat === 'Time' ? `${mat}: ${formatTime(amt)}` : `${mat}: ${amt}`);
             col.appendChild(d);
@@ -370,36 +372,24 @@ function renderResults(total, breakdown) {
     breakdownDiv.appendChild(Object.assign(document.createElement('h3'), {
         textContent: 'Breakdown'
     }));
-for (const [itemName, mats] of Object.entries(breakdown)) {
-  const itemData = window.itemDetails[itemName];
-  const fabricators = itemData?.fabricators || [];
 
-  const itemBlock = document.createElement('div');
-  itemBlock.className = 'breakdown-block';
+    for (const [itemName, mats] of Object.entries(breakdown)) {
+        const title = document.createElement('div');
+        title.className = 'item-title';
+        title.textContent = `📦 ${itemName}`;
+        breakdownDiv.appendChild(title);
 
-  const title = document.createElement('div');
-  title.className = 'item-title';
-  title.innerHTML = `<strong>📦 ${itemName}</strong>`;
-  itemBlock.appendChild(title);
+        const bBase = {};
+        const bCrafted = {};
+        const bWater = {};
+        const bTime = {};
 
-  if (fabricators.length > 0) {
-    const fabList = document.createElement('div');
-    fabList.className = 'fabricator-list';
-    fabList.innerHTML = `🏭 <em>Fabricator(s):</em> ${fabricators.join(', ')}`;
-    itemBlock.appendChild(fabList);
-  }
-
-  // You can keep this part if you're classifying into base/craft/time/water, etc.
-  for (const [mat, amt] of Object.entries(mats)) {
-    const p = document.createElement('div');
-    p.className = 'breakdown-item';
-    p.textContent = `  - ${mat}: ${amt}`;
-    itemBlock.appendChild(p);
-  }
-
-  breakdownDiv.appendChild(itemBlock);
-}
-
+        for (const [mat, amt] of Object.entries(mats)) {
+            if (isTime(mat)) bTime[mat] = amt;
+            else if (isWater(mat)) bWater[mat] = amt;
+            else if (isCraftable(mat)) bCrafted[mat] = amt;
+            else bBase[mat] = amt;
+        }
 
         const itemCols = document.createElement('div');
         itemCols.className = 'columns';
