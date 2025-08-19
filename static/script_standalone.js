@@ -299,6 +299,12 @@ function flattenIngredients(item, quantity) {
     }
     return result;
 }
+function formatTime(seconds) {
+  const total = Math.round(seconds); // Round to nearest whole number
+  const mins = Math.floor(total / 60);
+  const secs = total % 60;
+  return mins > 0 ? `${mins} min${secs > 0 ? ` ${secs} sec` : ''}` : `${secs} sec`;
+}
 
 function renderResults(total, breakdown) {
     const container = document.getElementById('results');
@@ -330,9 +336,9 @@ function renderResults(total, breakdown) {
         for (const [mat, amt] of Object.entries(items)) {
             const d = document.createElement('div');
             d.className = 'material-item';
-            d.textContent = hideNames
-                ? `${amt}`
-                : `${mat}: ${amt}`;
+          d.textContent = hideNames
+  ? (mat === 'Time' ? formatTime(amt) : `${amt}`)
+  : (mat === 'Time' ? `${mat}: ${formatTime(amt)}` : `${mat}: ${amt}`);
             col.appendChild(d);
         }
         return col;
